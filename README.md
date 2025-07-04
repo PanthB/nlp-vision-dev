@@ -22,31 +22,20 @@ venv\Scripts\activate     # On Windows
 
 ### 2. Install Dependencies
 ```bash
-pip install PyQt6 opencv-python numpy scikit-learn sentence-transformers
-```
-
-### 3. Save Dependencies (Optional)
-```bash
-pip freeze > requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Usage
 
 ### Video Receiver
 ```bash
-python src/receiver.py
+cd src
+python receiver.py
 ```
 - Receives video streams on UDP port 5005
 - Displays video with automatic scaling
 - Includes text input for user commands
 - Shows received user input in formatted display
-
-### Simple Video Receiver (Alternative)
-```bash
-python src/new_receiver.py  # If available
-```
-- Simplified version without packet reassembly
-- Assumes complete JPEG frames in single UDP packets
 
 ### NLP Command Processor
 ```bash
