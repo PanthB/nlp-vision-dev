@@ -10,6 +10,7 @@ import time
 import traceback
 from collections import defaultdict
 from typing import Dict, Any
+from nlp_test import process_user_input
 
 from PyQt6.QtWidgets import (
     QApplication,
@@ -73,23 +74,41 @@ class VideoReceiver(QMainWindow):
         self.setCentralWidget(central_widget)
         layout = QVBoxLayout(central_widget)
 
-        # Video display label
+        # Video display label - give it much more space
         self.video_label = QLabel()
         self.video_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        layout.addWidget(self.video_label)
+        self.video_label.setMinimumHeight(400)  # Set minimum height for video
+        layout.addWidget(self.video_label, 1)  # Give it stretch factor of 1
 
-        # Text input and submit button
+        # Text input and submit button - keep compact
         self.text_input = QLineEdit()
         self.text_input.setPlaceholderText("Filter the video color...")
-        layout.addWidget(self.text_input)
+        layout.addWidget(self.text_input, 0)  # No stretch - keep compact
 
         submit_button = QPushButton("Submit")
         submit_button.clicked.connect(self.handle_submit)
-        layout.addWidget(submit_button)
+        layout.addWidget(submit_button, 0)  # No stretch - keep compact
 
-        # Status label
+        # User input display label - keep compact
+        self.user_input_label = QLabel("")
+        self.user_input_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.user_input_label.setStyleSheet("""
+            QLabel {
+                font-size: 14px;
+                font-weight: bold;
+                color: #2c3e50;
+                padding: 10px;
+                background-color: #ecf0f1;
+                border-radius: 5px;
+                margin: 5px;
+            }
+        """)
+        self.user_input_label.setWordWrap(True)
+        layout.addWidget(self.user_input_label, 0)  # No stretch - keep compact
+
+        # Status label - keep compact
         self.status_label = QLabel("Waiting for video stream...")
-        layout.addWidget(self.status_label)
+        layout.addWidget(self.status_label, 0)  # No stretch - keep compact
 
     def _setup_udp_socket(self) -> None:
         """Initialize and configure the UDP socket."""
@@ -268,7 +287,7 @@ class VideoReceiver(QMainWindow):
         """Decode JPEG data into a numpy array."""
         nparr = np.frombuffer(jpeg_data, np.uint8)
         logger.info(f"Converted to numpy array of size: {nparr.size}")
-        return cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+        return cv2.imdecode(nparr, cv2.COLOR_BGR2GRAY)
 
     def _display_frame(self, frame: np.ndarray) -> None:
         """Display the processed frame."""
@@ -321,7 +340,15 @@ class VideoReceiver(QMainWindow):
         if text:
             print(f"User submitted: {text}")
             self.text_input.clear()
+            
+            # Update the user input display label
+            self.user_input_label.setText(f"Received user input: {text}")
+            
+            # Also update status label as backup
             self.status_label.setText(f"Last submission: {text}")
+        else:
+            # Clear the display if no text
+            self.user_input_label.setText("")
 
     def closeEvent(self, event: Any) -> None:
         """Clean up when window is closed."""
