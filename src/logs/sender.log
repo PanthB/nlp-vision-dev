@@ -1,0 +1,1153 @@
+2025-06-16 17:58:45,507 - INFO - === Starting new sender session ===
+2025-06-16 17:58:45,508 - INFO - Starting video sender...
+2025-06-16 17:58:45,508 - INFO - Streaming test_video.mp4 to 127.0.0.1:5005
+2025-06-16 17:58:45,508 - INFO - Press Ctrl+C to stop
+2025-06-16 17:58:45,533 - INFO - Starting video stream from test_video.mp4
+2025-06-16 17:58:45,534 - INFO - Sending to 127.0.0.1:5005
+2025-06-16 17:58:45,564 - INFO - Frame 0: Sending 69 packets, total size 94493 bytes
+2025-06-16 17:58:45,564 - INFO - Sent start of frame 0, total packets: 69
+2025-06-16 17:58:45,645 - INFO - Sent end of frame 0, packet 68/68
+2025-06-16 17:58:45,688 - INFO - Frame 1: Sending 67 packets, total size 92956 bytes
+2025-06-16 17:58:45,688 - INFO - Sent start of frame 1, total packets: 67
+2025-06-16 17:58:45,766 - INFO - Sent end of frame 1, packet 66/66
+2025-06-16 17:58:45,812 - INFO - Frame 2: Sending 68 packets, total size 93132 bytes
+2025-06-16 17:58:45,812 - INFO - Sent start of frame 2, total packets: 68
+2025-06-16 17:58:45,892 - INFO - Sent end of frame 2, packet 67/67
+2025-06-16 17:58:45,936 - INFO - Frame 3: Sending 68 packets, total size 93147 bytes
+2025-06-16 17:58:45,936 - INFO - Sent start of frame 3, total packets: 68
+2025-06-16 17:58:46,088 - INFO - Sent end of frame 3, packet 67/67
+2025-06-16 17:58:46,134 - INFO - Frame 4: Sending 69 packets, total size 94667 bytes
+2025-06-16 17:58:46,135 - INFO - Sent start of frame 4, total packets: 69
+2025-06-16 17:58:46,217 - INFO - Sent end of frame 4, packet 68/68
+2025-06-16 17:58:46,262 - INFO - Frame 5: Sending 68 packets, total size 93158 bytes
+2025-06-16 17:58:46,262 - INFO - Sent start of frame 5, total packets: 68
+2025-06-16 17:58:46,343 - INFO - Sent end of frame 5, packet 67/67
+2025-06-16 17:58:46,389 - INFO - Frame 6: Sending 68 packets, total size 93527 bytes
+2025-06-16 17:58:46,389 - INFO - Sent start of frame 6, total packets: 68
+2025-06-16 17:58:46,469 - INFO - Sent end of frame 6, packet 67/67
+2025-06-16 17:58:46,514 - INFO - Frame 7: Sending 68 packets, total size 93366 bytes
+2025-06-16 17:58:46,514 - INFO - Sent start of frame 7, total packets: 68
+2025-06-16 17:58:46,594 - INFO - Sent end of frame 7, packet 67/67
+2025-06-16 17:58:46,638 - INFO - Frame 8: Sending 69 packets, total size 95007 bytes
+2025-06-16 17:58:46,638 - INFO - Sent start of frame 8, total packets: 69
+2025-06-16 17:58:46,718 - INFO - Sent end of frame 8, packet 68/68
+2025-06-16 17:58:46,761 - INFO - Frame 9: Sending 68 packets, total size 93477 bytes
+2025-06-16 17:58:46,762 - INFO - Sent start of frame 9, total packets: 68
+2025-06-16 17:58:46,842 - INFO - Sent end of frame 9, packet 67/67
+2025-06-16 17:58:46,887 - INFO - Frame 10: Sending 68 packets, total size 93848 bytes
+2025-06-16 17:58:46,887 - INFO - Sent start of frame 10, total packets: 68
+2025-06-16 17:58:46,968 - INFO - Sent end of frame 10, packet 67/67
+2025-06-16 17:58:47,011 - INFO - Frame 11: Sending 68 packets, total size 93970 bytes
+2025-06-16 17:58:47,011 - INFO - Sent start of frame 11, total packets: 68
+2025-06-16 17:58:47,091 - INFO - Sent end of frame 11, packet 67/67
+2025-06-16 17:58:47,136 - INFO - Frame 12: Sending 69 packets, total size 95474 bytes
+2025-06-16 17:58:47,137 - INFO - Sent start of frame 12, total packets: 69
+2025-06-16 17:58:47,218 - INFO - Sent end of frame 12, packet 68/68
+2025-06-16 17:58:47,262 - INFO - Frame 13: Sending 68 packets, total size 93833 bytes
+2025-06-16 17:58:47,262 - INFO - Sent start of frame 13, total packets: 68
+2025-06-16 17:58:47,508 - INFO - Sent end of frame 13, packet 67/67
+2025-06-16 17:58:47,551 - INFO - Frame 14: Sending 69 packets, total size 94598 bytes
+2025-06-16 17:58:47,552 - INFO - Sent start of frame 14, total packets: 69
+2025-06-16 17:58:47,636 - INFO - Sent end of frame 14, packet 68/68
+2025-06-16 17:58:47,680 - INFO - Frame 15: Sending 69 packets, total size 94386 bytes
+2025-06-16 17:58:47,681 - INFO - Sent start of frame 15, total packets: 69
+2025-06-16 17:58:47,760 - INFO - Sent end of frame 15, packet 68/68
+2025-06-16 17:58:47,805 - INFO - Frame 16: Sending 70 packets, total size 95828 bytes
+2025-06-16 17:58:47,805 - INFO - Sent start of frame 16, total packets: 70
+2025-06-16 17:58:47,948 - INFO - Sent end of frame 16, packet 69/69
+2025-06-16 17:58:47,993 - INFO - Frame 17: Sending 68 packets, total size 94336 bytes
+2025-06-16 17:58:47,993 - INFO - Sent start of frame 17, total packets: 68
+2025-06-16 17:58:48,073 - INFO - Sent end of frame 17, packet 67/67
+2025-06-16 17:58:48,116 - INFO - Frame 18: Sending 69 packets, total size 94666 bytes
+2025-06-16 17:58:48,116 - INFO - Sent start of frame 18, total packets: 69
+2025-06-16 17:58:48,198 - INFO - Sent end of frame 18, packet 68/68
+2025-06-16 17:58:48,241 - INFO - Frame 19: Sending 69 packets, total size 94411 bytes
+2025-06-16 17:58:48,241 - INFO - Sent start of frame 19, total packets: 69
+2025-06-16 17:58:48,323 - INFO - Sent end of frame 19, packet 68/68
+2025-06-16 17:58:48,368 - INFO - Frame 20: Sending 70 packets, total size 96236 bytes
+2025-06-16 17:58:48,369 - INFO - Sent start of frame 20, total packets: 70
+2025-06-16 17:58:48,451 - INFO - Sent end of frame 20, packet 69/69
+2025-06-16 17:58:48,494 - INFO - Frame 21: Sending 69 packets, total size 94570 bytes
+2025-06-16 17:58:48,495 - INFO - Sent start of frame 21, total packets: 69
+2025-06-16 17:58:48,643 - INFO - Sent end of frame 21, packet 68/68
+2025-06-16 17:58:48,686 - INFO - Frame 22: Sending 69 packets, total size 94916 bytes
+2025-06-16 17:58:48,686 - INFO - Sent start of frame 22, total packets: 69
+2025-06-16 17:58:48,766 - INFO - Sent end of frame 22, packet 68/68
+2025-06-16 17:58:48,809 - INFO - Frame 23: Sending 69 packets, total size 94809 bytes
+2025-06-16 17:58:48,810 - INFO - Sent start of frame 23, total packets: 69
+2025-06-16 17:58:48,890 - INFO - Sent end of frame 23, packet 68/68
+2025-06-16 17:58:48,934 - INFO - Frame 24: Sending 70 packets, total size 96397 bytes
+2025-06-16 17:58:48,934 - INFO - Sent start of frame 24, total packets: 70
+2025-06-16 17:58:49,016 - INFO - Sent end of frame 24, packet 69/69
+2025-06-16 17:58:49,059 - INFO - Frame 25: Sending 69 packets, total size 94760 bytes
+2025-06-16 17:58:49,060 - INFO - Sent start of frame 25, total packets: 69
+2025-06-16 17:58:49,141 - INFO - Sent end of frame 25, packet 68/68
+2025-06-16 17:58:49,186 - INFO - Frame 26: Sending 69 packets, total size 95027 bytes
+2025-06-16 17:58:49,187 - INFO - Sent start of frame 26, total packets: 69
+2025-06-16 17:58:49,267 - INFO - Sent end of frame 26, packet 68/68
+2025-06-16 17:58:49,311 - INFO - Frame 27: Sending 69 packets, total size 94748 bytes
+2025-06-16 17:58:49,312 - INFO - Sent start of frame 27, total packets: 69
+2025-06-16 17:58:49,392 - INFO - Sent end of frame 27, packet 68/68
+2025-06-16 17:58:49,434 - INFO - Frame 28: Sending 70 packets, total size 96578 bytes
+2025-06-16 17:58:49,434 - INFO - Sent start of frame 28, total packets: 70
+2025-06-16 17:58:49,515 - INFO - Sent end of frame 28, packet 69/69
+2025-06-16 17:58:49,559 - INFO - Frame 29: Sending 69 packets, total size 94906 bytes
+2025-06-16 17:58:49,560 - INFO - Sent start of frame 29, total packets: 69
+2025-06-16 17:58:49,689 - INFO - Sent end of frame 29, packet 68/68
+2025-06-16 17:58:49,733 - INFO - Frame 30: Sending 69 packets, total size 95342 bytes
+2025-06-16 17:58:49,733 - INFO - Sent start of frame 30, total packets: 69
+2025-06-16 17:58:49,857 - INFO - Sent end of frame 30, packet 68/68
+2025-06-16 17:58:49,899 - INFO - Frame 31: Sending 69 packets, total size 95146 bytes
+2025-06-16 17:58:49,899 - INFO - Sent start of frame 31, total packets: 69
+2025-06-16 17:58:49,979 - INFO - Sent end of frame 31, packet 68/68
+2025-06-16 17:58:50,024 - INFO - Frame 32: Sending 70 packets, total size 96764 bytes
+2025-06-16 17:58:50,025 - INFO - Sent start of frame 32, total packets: 70
+2025-06-16 17:58:50,106 - INFO - Sent end of frame 32, packet 69/69
+2025-06-16 17:58:50,146 - INFO - Frame 33: Sending 69 packets, total size 94993 bytes
+2025-06-16 17:58:50,147 - INFO - Sent start of frame 33, total packets: 69
+2025-06-16 17:58:50,227 - INFO - Sent end of frame 33, packet 68/68
+2025-06-16 17:58:50,270 - INFO - Frame 34: Sending 69 packets, total size 95424 bytes
+2025-06-16 17:58:50,271 - INFO - Sent start of frame 34, total packets: 69
+2025-06-16 17:58:50,353 - INFO - Sent end of frame 34, packet 68/68
+2025-06-16 17:58:50,397 - INFO - Frame 35: Sending 69 packets, total size 95279 bytes
+2025-06-16 17:58:50,397 - INFO - Sent start of frame 35, total packets: 69
+2025-06-16 17:58:50,479 - INFO - Sent end of frame 35, packet 68/68
+2025-06-16 17:58:50,522 - INFO - Frame 36: Sending 70 packets, total size 96940 bytes
+2025-06-16 17:58:50,522 - INFO - Sent start of frame 36, total packets: 70
+2025-06-16 17:58:50,605 - INFO - Sent end of frame 36, packet 69/69
+2025-06-16 17:58:50,647 - INFO - Frame 37: Sending 69 packets, total size 95030 bytes
+2025-06-16 17:58:50,647 - INFO - Sent start of frame 37, total packets: 69
+2025-06-16 17:58:50,727 - INFO - Sent end of frame 37, packet 68/68
+2025-06-16 17:58:50,771 - INFO - Frame 38: Sending 69 packets, total size 95522 bytes
+2025-06-16 17:58:50,771 - INFO - Sent start of frame 38, total packets: 69
+2025-06-16 17:58:50,850 - INFO - Sent end of frame 38, packet 68/68
+2025-06-16 17:58:50,892 - INFO - Frame 39: Sending 69 packets, total size 95203 bytes
+2025-06-16 17:58:50,893 - INFO - Sent start of frame 39, total packets: 69
+2025-06-16 17:58:50,974 - INFO - Sent end of frame 39, packet 68/68
+2025-06-16 17:58:51,018 - INFO - Frame 40: Sending 70 packets, total size 97059 bytes
+2025-06-16 17:58:51,018 - INFO - Sent start of frame 40, total packets: 70
+2025-06-16 17:58:51,165 - INFO - Sent end of frame 40, packet 69/69
+2025-06-16 17:58:51,209 - INFO - Frame 41: Sending 69 packets, total size 95215 bytes
+2025-06-16 17:58:51,209 - INFO - Sent start of frame 41, total packets: 69
+2025-06-16 17:58:51,292 - INFO - Sent end of frame 41, packet 68/68
+2025-06-16 17:58:51,336 - INFO - Frame 42: Sending 69 packets, total size 95722 bytes
+2025-06-16 17:58:51,337 - INFO - Sent start of frame 42, total packets: 69
+2025-06-16 17:58:51,418 - INFO - Sent end of frame 42, packet 68/68
+2025-06-16 17:58:51,461 - INFO - Frame 43: Sending 69 packets, total size 95676 bytes
+2025-06-16 17:58:51,462 - INFO - Sent start of frame 43, total packets: 69
+2025-06-16 17:58:51,542 - INFO - Sent end of frame 43, packet 68/68
+2025-06-16 17:58:51,586 - INFO - Frame 44: Sending 71 packets, total size 97417 bytes
+2025-06-16 17:58:51,586 - INFO - Sent start of frame 44, total packets: 71
+2025-06-16 17:58:51,669 - INFO - Sent end of frame 44, packet 70/70
+2025-06-16 17:58:51,712 - INFO - Frame 45: Sending 69 packets, total size 95542 bytes
+2025-06-16 17:58:51,712 - INFO - Sent start of frame 45, total packets: 69
+2025-06-16 17:58:51,792 - INFO - Sent end of frame 45, packet 68/68
+2025-06-16 17:58:51,836 - INFO - Frame 46: Sending 70 packets, total size 95822 bytes
+2025-06-16 17:58:51,836 - INFO - Sent start of frame 46, total packets: 70
+2025-06-16 17:58:51,918 - INFO - Sent end of frame 46, packet 69/69
+2025-06-16 17:58:51,962 - INFO - Frame 47: Sending 69 packets, total size 95623 bytes
+2025-06-16 17:58:51,963 - INFO - Sent start of frame 47, total packets: 69
+2025-06-16 17:58:52,044 - INFO - Sent end of frame 47, packet 68/68
+2025-06-16 17:58:52,085 - INFO - Frame 48: Sending 71 packets, total size 97300 bytes
+2025-06-16 17:58:52,085 - INFO - Sent start of frame 48, total packets: 71
+2025-06-16 17:58:52,167 - INFO - Sent end of frame 48, packet 70/70
+2025-06-16 17:58:52,208 - INFO - Frame 49: Sending 69 packets, total size 95648 bytes
+2025-06-16 17:58:52,209 - INFO - Sent start of frame 49, total packets: 69
+2025-06-16 17:58:52,291 - INFO - Sent end of frame 49, packet 68/68
+2025-06-16 17:58:52,337 - INFO - Frame 50: Sending 70 packets, total size 95809 bytes
+2025-06-16 17:58:52,337 - INFO - Sent start of frame 50, total packets: 70
+2025-06-16 17:58:52,419 - INFO - Sent end of frame 50, packet 69/69
+2025-06-16 17:58:52,459 - INFO - Frame 51: Sending 70 packets, total size 95900 bytes
+2025-06-16 17:58:52,459 - INFO - Sent start of frame 51, total packets: 70
+2025-06-16 17:58:52,541 - INFO - Sent end of frame 51, packet 69/69
+2025-06-16 17:58:52,585 - INFO - Frame 52: Sending 71 packets, total size 97922 bytes
+2025-06-16 17:58:52,585 - INFO - Sent start of frame 52, total packets: 71
+2025-06-16 17:58:52,669 - INFO - Sent end of frame 52, packet 70/70
+2025-06-16 17:58:52,710 - INFO - Frame 53: Sending 70 packets, total size 95942 bytes
+2025-06-16 17:58:52,711 - INFO - Sent start of frame 53, total packets: 70
+2025-06-16 17:58:52,792 - INFO - Sent end of frame 53, packet 69/69
+2025-06-16 17:58:52,836 - INFO - Frame 54: Sending 70 packets, total size 96733 bytes
+2025-06-16 17:58:52,836 - INFO - Sent start of frame 54, total packets: 70
+2025-06-16 17:58:52,918 - INFO - Sent end of frame 54, packet 69/69
+2025-06-16 17:58:52,961 - INFO - Frame 55: Sending 70 packets, total size 96387 bytes
+2025-06-16 17:58:52,961 - INFO - Sent start of frame 55, total packets: 70
+2025-06-16 17:58:53,096 - INFO - Sent end of frame 55, packet 69/69
+2025-06-16 17:58:53,140 - INFO - Frame 56: Sending 71 packets, total size 98421 bytes
+2025-06-16 17:58:53,140 - INFO - Sent start of frame 56, total packets: 71
+2025-06-16 17:58:53,222 - INFO - Sent end of frame 56, packet 70/70
+2025-06-16 17:58:53,266 - INFO - Frame 57: Sending 70 packets, total size 96440 bytes
+2025-06-16 17:58:53,266 - INFO - Sent start of frame 57, total packets: 70
+2025-06-16 17:58:53,347 - INFO - Sent end of frame 57, packet 69/69
+2025-06-16 17:58:53,391 - INFO - Frame 58: Sending 70 packets, total size 96662 bytes
+2025-06-16 17:58:53,391 - INFO - Sent start of frame 58, total packets: 70
+2025-06-16 17:58:53,473 - INFO - Sent end of frame 58, packet 69/69
+2025-06-16 17:58:53,512 - INFO - Frame 59: Sending 70 packets, total size 96335 bytes
+2025-06-16 17:58:53,513 - INFO - Sent start of frame 59, total packets: 70
+2025-06-16 17:58:53,594 - INFO - Sent end of frame 59, packet 69/69
+2025-06-16 17:58:53,638 - INFO - Frame 60: Sending 71 packets, total size 98130 bytes
+2025-06-16 17:58:53,638 - INFO - Sent start of frame 60, total packets: 71
+2025-06-16 17:58:53,721 - INFO - Sent end of frame 60, packet 70/70
+2025-06-16 17:58:53,764 - INFO - Frame 61: Sending 70 packets, total size 96130 bytes
+2025-06-16 17:58:53,764 - INFO - Sent start of frame 61, total packets: 70
+2025-06-16 17:58:53,847 - INFO - Sent end of frame 61, packet 69/69
+2025-06-16 17:58:53,891 - INFO - Frame 62: Sending 70 packets, total size 96667 bytes
+2025-06-16 17:58:53,892 - INFO - Sent start of frame 62, total packets: 70
+2025-06-16 17:58:54,011 - INFO - Sent end of frame 62, packet 69/69
+2025-06-16 17:58:54,054 - INFO - Frame 63: Sending 70 packets, total size 96449 bytes
+2025-06-16 17:58:54,054 - INFO - Sent start of frame 63, total packets: 70
+2025-06-16 17:58:54,139 - INFO - Sent end of frame 63, packet 69/69
+2025-06-16 17:58:54,178 - INFO - Frame 64: Sending 72 packets, total size 98571 bytes
+2025-06-16 17:58:54,178 - INFO - Sent start of frame 64, total packets: 72
+2025-06-16 17:58:54,264 - INFO - Sent end of frame 64, packet 71/71
+2025-06-16 17:58:54,309 - INFO - Frame 65: Sending 70 packets, total size 96594 bytes
+2025-06-16 17:58:54,309 - INFO - Sent start of frame 65, total packets: 70
+2025-06-16 17:58:54,391 - INFO - Sent end of frame 65, packet 69/69
+2025-06-16 17:58:54,435 - INFO - Frame 66: Sending 70 packets, total size 96855 bytes
+2025-06-16 17:58:54,435 - INFO - Sent start of frame 66, total packets: 70
+2025-06-16 17:58:54,555 - INFO - Sent end of frame 66, packet 69/69
+2025-06-16 17:58:54,638 - INFO - Frame 67: Sending 70 packets, total size 96776 bytes
+2025-06-16 17:58:54,638 - INFO - Sent start of frame 67, total packets: 70
+2025-06-16 17:58:54,766 - INFO - Sent end of frame 67, packet 69/69
+2025-06-16 17:58:54,810 - INFO - Frame 68: Sending 72 packets, total size 98861 bytes
+2025-06-16 17:58:54,810 - INFO - Sent start of frame 68, total packets: 72
+2025-06-16 17:58:54,895 - INFO - Sent end of frame 68, packet 71/71
+2025-06-16 17:58:54,938 - INFO - Frame 69: Sending 70 packets, total size 96489 bytes
+2025-06-16 17:58:54,938 - INFO - Sent start of frame 69, total packets: 70
+2025-06-16 17:58:55,111 - INFO - Sent end of frame 69, packet 69/69
+2025-06-16 17:58:55,154 - INFO - Frame 70: Sending 70 packets, total size 97117 bytes
+2025-06-16 17:58:55,155 - INFO - Sent start of frame 70, total packets: 70
+2025-06-16 17:58:55,239 - INFO - Sent end of frame 70, packet 69/69
+2025-06-16 17:58:55,283 - INFO - Frame 71: Sending 70 packets, total size 97032 bytes
+2025-06-16 17:58:55,284 - INFO - Sent start of frame 71, total packets: 70
+2025-06-16 17:58:55,365 - INFO - Sent end of frame 71, packet 69/69
+2025-06-16 17:58:55,409 - INFO - Frame 72: Sending 72 packets, total size 99224 bytes
+2025-06-16 17:58:55,409 - INFO - Sent start of frame 72, total packets: 72
+2025-06-16 17:58:55,494 - INFO - Sent end of frame 72, packet 71/71
+2025-06-16 17:58:55,538 - INFO - Frame 73: Sending 71 packets, total size 97389 bytes
+2025-06-16 17:58:55,539 - INFO - Sent start of frame 73, total packets: 71
+2025-06-16 17:58:55,622 - INFO - Sent end of frame 73, packet 70/70
+2025-06-16 17:58:55,663 - INFO - Frame 74: Sending 71 packets, total size 97688 bytes
+2025-06-16 17:58:55,663 - INFO - Sent start of frame 74, total packets: 71
+2025-06-16 17:58:55,747 - INFO - Sent end of frame 74, packet 70/70
+2025-06-16 17:58:55,789 - INFO - Frame 75: Sending 71 packets, total size 97287 bytes
+2025-06-16 17:58:55,790 - INFO - Sent start of frame 75, total packets: 71
+2025-06-16 17:58:55,871 - INFO - Sent end of frame 75, packet 70/70
+2025-06-16 17:58:55,916 - INFO - Frame 76: Sending 72 packets, total size 99369 bytes
+2025-06-16 17:58:55,916 - INFO - Sent start of frame 76, total packets: 72
+2025-06-16 17:58:56,001 - INFO - Sent end of frame 76, packet 71/71
+2025-06-16 17:58:56,044 - INFO - Frame 77: Sending 71 packets, total size 97318 bytes
+2025-06-16 17:58:56,044 - INFO - Sent start of frame 77, total packets: 71
+2025-06-16 17:58:56,128 - INFO - Sent end of frame 77, packet 70/70
+2025-06-16 17:58:56,173 - INFO - Frame 78: Sending 71 packets, total size 98068 bytes
+2025-06-16 17:58:56,173 - INFO - Sent start of frame 78, total packets: 71
+2025-06-16 17:58:56,350 - INFO - Sent end of frame 78, packet 70/70
+2025-06-16 17:58:56,392 - INFO - Frame 79: Sending 71 packets, total size 97733 bytes
+2025-06-16 17:58:56,392 - INFO - Sent start of frame 79, total packets: 71
+2025-06-16 17:58:56,477 - INFO - Sent end of frame 79, packet 70/70
+2025-06-16 17:58:56,519 - INFO - Frame 80: Sending 72 packets, total size 99792 bytes
+2025-06-16 17:58:56,520 - INFO - Sent start of frame 80, total packets: 72
+2025-06-16 17:58:56,604 - INFO - Sent end of frame 80, packet 71/71
+2025-06-16 17:58:56,665 - INFO - Frame 81: Sending 71 packets, total size 97786 bytes
+2025-06-16 17:58:56,665 - INFO - Sent start of frame 81, total packets: 71
+2025-06-16 17:58:56,754 - INFO - Sent end of frame 81, packet 70/70
+2025-06-16 17:58:56,793 - INFO - Frame 82: Sending 71 packets, total size 98472 bytes
+2025-06-16 17:58:56,794 - INFO - Sent start of frame 82, total packets: 71
+2025-06-16 17:58:56,874 - INFO - Sent end of frame 82, packet 70/70
+2025-06-16 17:58:56,917 - INFO - Frame 83: Sending 71 packets, total size 98201 bytes
+2025-06-16 17:58:56,918 - INFO - Sent start of frame 83, total packets: 71
+2025-06-16 17:58:57,002 - INFO - Sent end of frame 83, packet 70/70
+2025-06-16 17:58:57,048 - INFO - Frame 84: Sending 73 packets, total size 100276 bytes
+2025-06-16 17:58:57,049 - INFO - Sent start of frame 84, total packets: 73
+2025-06-16 17:58:57,134 - INFO - Sent end of frame 84, packet 72/72
+2025-06-16 17:58:57,174 - INFO - Frame 85: Sending 71 packets, total size 98012 bytes
+2025-06-16 17:58:57,175 - INFO - Sent start of frame 85, total packets: 71
+2025-06-16 17:58:57,258 - INFO - Sent end of frame 85, packet 70/70
+2025-06-16 17:58:57,303 - INFO - Frame 86: Sending 72 packets, total size 98635 bytes
+2025-06-16 17:58:57,303 - INFO - Sent start of frame 86, total packets: 72
+2025-06-16 17:58:57,389 - INFO - Sent end of frame 86, packet 71/71
+2025-06-16 17:58:57,428 - INFO - Frame 87: Sending 71 packets, total size 98351 bytes
+2025-06-16 17:58:57,429 - INFO - Sent start of frame 87, total packets: 71
+2025-06-16 17:58:57,513 - INFO - Sent end of frame 87, packet 70/70
+2025-06-16 17:58:57,557 - INFO - Frame 88: Sending 73 packets, total size 100351 bytes
+2025-06-16 17:58:57,557 - INFO - Sent start of frame 88, total packets: 73
+2025-06-16 17:58:57,644 - INFO - Sent end of frame 88, packet 72/72
+2025-06-16 17:58:57,687 - INFO - Frame 89: Sending 73 packets, total size 100141 bytes
+2025-06-16 17:58:57,687 - INFO - Sent start of frame 89, total packets: 73
+2025-06-16 17:58:57,772 - INFO - Sent end of frame 89, packet 72/72
+2025-06-16 17:58:57,816 - INFO - Frame 90: Sending 73 packets, total size 100874 bytes
+2025-06-16 17:58:57,816 - INFO - Sent start of frame 90, total packets: 73
+2025-06-16 17:58:57,902 - INFO - Sent end of frame 90, packet 72/72
+2025-06-16 17:58:57,945 - INFO - Frame 91: Sending 72 packets, total size 98807 bytes
+2025-06-16 17:58:57,945 - INFO - Sent start of frame 91, total packets: 72
+2025-06-16 17:58:58,031 - INFO - Sent end of frame 91, packet 71/71
+2025-06-16 17:58:58,075 - INFO - Frame 92: Sending 72 packets, total size 99504 bytes
+2025-06-16 17:58:58,076 - INFO - Sent start of frame 92, total packets: 72
+2025-06-16 17:58:58,161 - INFO - Sent end of frame 92, packet 71/71
+2025-06-16 17:58:58,204 - INFO - Frame 93: Sending 72 packets, total size 98559 bytes
+2025-06-16 17:58:58,204 - INFO - Sent start of frame 93, total packets: 72
+2025-06-16 17:58:58,288 - INFO - Sent end of frame 93, packet 71/71
+2025-06-16 17:58:58,425 - INFO - Frame 94: Sending 73 packets, total size 100301 bytes
+2025-06-16 17:58:58,425 - INFO - Sent start of frame 94, total packets: 73
+2025-06-16 17:58:58,513 - INFO - Sent end of frame 94, packet 72/72
+2025-06-16 17:58:58,555 - INFO - Frame 95: Sending 71 packets, total size 98422 bytes
+2025-06-16 17:58:58,556 - INFO - Sent start of frame 95, total packets: 71
+2025-06-16 17:58:58,640 - INFO - Sent end of frame 95, packet 70/70
+2025-06-16 17:58:58,682 - INFO - Frame 96: Sending 72 packets, total size 99095 bytes
+2025-06-16 17:58:58,683 - INFO - Sent start of frame 96, total packets: 72
+2025-06-16 17:58:58,768 - INFO - Sent end of frame 96, packet 71/71
+2025-06-16 17:58:58,809 - INFO - Frame 97: Sending 71 packets, total size 98511 bytes
+2025-06-16 17:58:58,809 - INFO - Sent start of frame 97, total packets: 71
+2025-06-16 17:58:58,893 - INFO - Sent end of frame 97, packet 70/70
+2025-06-16 17:58:58,937 - INFO - Frame 98: Sending 73 packets, total size 100628 bytes
+2025-06-16 17:58:58,937 - INFO - Sent start of frame 98, total packets: 73
+2025-06-16 17:58:59,024 - INFO - Sent end of frame 98, packet 72/72
+2025-06-16 17:58:59,069 - INFO - Frame 99: Sending 71 packets, total size 98527 bytes
+2025-06-16 17:58:59,069 - INFO - Sent start of frame 99, total packets: 71
+2025-06-16 17:58:59,153 - INFO - Sent end of frame 99, packet 70/70
+2025-06-16 17:58:59,196 - INFO - Frame 100: Sending 72 packets, total size 99089 bytes
+2025-06-16 17:58:59,196 - INFO - Sent start of frame 100, total packets: 72
+2025-06-16 17:58:59,282 - INFO - Sent end of frame 100, packet 71/71
+2025-06-16 17:58:59,327 - INFO - Frame 101: Sending 72 packets, total size 98579 bytes
+2025-06-16 17:58:59,327 - INFO - Sent start of frame 101, total packets: 72
+2025-06-16 17:58:59,411 - INFO - Sent end of frame 101, packet 71/71
+2025-06-16 17:58:59,454 - INFO - Frame 102: Sending 73 packets, total size 100705 bytes
+2025-06-16 17:58:59,454 - INFO - Sent start of frame 102, total packets: 73
+2025-06-16 17:58:59,541 - INFO - Sent end of frame 102, packet 72/72
+2025-06-16 17:58:59,585 - INFO - Frame 103: Sending 72 packets, total size 98551 bytes
+2025-06-16 17:58:59,585 - INFO - Sent start of frame 103, total packets: 72
+2025-06-16 17:58:59,671 - INFO - Sent end of frame 103, packet 71/71
+2025-06-16 17:58:59,711 - INFO - Frame 104: Sending 72 packets, total size 99219 bytes
+2025-06-16 17:58:59,712 - INFO - Sent start of frame 104, total packets: 72
+2025-06-16 17:58:59,796 - INFO - Sent end of frame 104, packet 71/71
+2025-06-16 17:58:59,839 - INFO - Frame 105: Sending 72 packets, total size 99030 bytes
+2025-06-16 17:58:59,839 - INFO - Sent start of frame 105, total packets: 72
+2025-06-16 17:58:59,923 - INFO - Sent end of frame 105, packet 71/71
+2025-06-16 17:58:59,966 - INFO - Frame 106: Sending 73 packets, total size 100995 bytes
+2025-06-16 17:58:59,966 - INFO - Sent start of frame 106, total packets: 73
+2025-06-16 17:59:00,059 - INFO - Sent end of frame 106, packet 72/72
+2025-06-16 17:59:00,157 - INFO - Frame 107: Sending 72 packets, total size 98856 bytes
+2025-06-16 17:59:00,157 - INFO - Sent start of frame 107, total packets: 72
+2025-06-16 17:59:00,265 - INFO - Sent end of frame 107, packet 71/71
+2025-06-16 17:59:00,308 - INFO - Frame 108: Sending 72 packets, total size 99230 bytes
+2025-06-16 17:59:00,308 - INFO - Sent start of frame 108, total packets: 72
+2025-06-16 17:59:00,492 - INFO - Sent end of frame 108, packet 71/71
+2025-06-16 17:59:00,536 - INFO - Frame 109: Sending 72 packets, total size 98817 bytes
+2025-06-16 17:59:00,536 - INFO - Sent start of frame 109, total packets: 72
+2025-06-16 17:59:00,621 - INFO - Sent end of frame 109, packet 71/71
+2025-06-16 17:59:00,661 - INFO - Frame 110: Sending 73 packets, total size 101028 bytes
+2025-06-16 17:59:00,662 - INFO - Sent start of frame 110, total packets: 73
+2025-06-16 17:59:00,747 - INFO - Sent end of frame 110, packet 72/72
+2025-06-16 17:59:00,844 - INFO - Frame 111: Sending 72 packets, total size 98803 bytes
+2025-06-16 17:59:00,844 - INFO - Sent start of frame 111, total packets: 72
+2025-06-16 17:59:00,931 - INFO - Sent end of frame 111, packet 71/71
+2025-06-16 17:59:00,973 - INFO - Frame 112: Sending 72 packets, total size 99404 bytes
+2025-06-16 17:59:00,974 - INFO - Sent start of frame 112, total packets: 72
+2025-06-16 17:59:01,058 - INFO - Sent end of frame 112, packet 71/71
+2025-06-16 17:59:01,103 - INFO - Frame 113: Sending 72 packets, total size 99087 bytes
+2025-06-16 17:59:01,104 - INFO - Sent start of frame 113, total packets: 72
+2025-06-16 17:59:01,188 - INFO - Sent end of frame 113, packet 71/71
+2025-06-16 17:59:01,232 - INFO - Frame 114: Sending 73 packets, total size 100914 bytes
+2025-06-16 17:59:01,232 - INFO - Sent start of frame 114, total packets: 73
+2025-06-16 17:59:01,319 - INFO - Sent end of frame 114, packet 72/72
+2025-06-16 17:59:01,362 - INFO - Frame 115: Sending 72 packets, total size 98981 bytes
+2025-06-16 17:59:01,362 - INFO - Sent start of frame 115, total packets: 72
+2025-06-16 17:59:01,448 - INFO - Sent end of frame 115, packet 71/71
+2025-06-16 17:59:01,492 - INFO - Frame 116: Sending 72 packets, total size 99509 bytes
+2025-06-16 17:59:01,492 - INFO - Sent start of frame 116, total packets: 72
+2025-06-16 17:59:01,578 - INFO - Sent end of frame 116, packet 71/71
+2025-06-16 17:59:01,621 - INFO - Frame 117: Sending 72 packets, total size 98945 bytes
+2025-06-16 17:59:01,622 - INFO - Sent start of frame 117, total packets: 72
+2025-06-16 17:59:01,706 - INFO - Sent end of frame 117, packet 71/71
+2025-06-16 17:59:01,751 - INFO - Frame 118: Sending 73 packets, total size 101120 bytes
+2025-06-16 17:59:01,751 - INFO - Sent start of frame 118, total packets: 73
+2025-06-16 17:59:01,839 - INFO - Sent end of frame 118, packet 72/72
+2025-06-16 17:59:01,883 - INFO - Frame 119: Sending 72 packets, total size 98971 bytes
+2025-06-16 17:59:01,883 - INFO - Sent start of frame 119, total packets: 72
+2025-06-16 17:59:01,967 - INFO - Sent end of frame 119, packet 71/71
+2025-06-16 17:59:02,011 - INFO - Frame 120: Sending 72 packets, total size 99056 bytes
+2025-06-16 17:59:02,011 - INFO - Sent start of frame 120, total packets: 72
+2025-06-16 17:59:02,159 - INFO - Sent end of frame 120, packet 71/71
+2025-06-16 17:59:02,255 - INFO - Frame 121: Sending 72 packets, total size 99018 bytes
+2025-06-16 17:59:02,255 - INFO - Sent start of frame 121, total packets: 72
+2025-06-16 17:59:02,343 - INFO - Sent end of frame 121, packet 71/71
+2025-06-16 17:59:02,386 - INFO - Frame 122: Sending 73 packets, total size 100783 bytes
+2025-06-16 17:59:02,387 - INFO - Sent start of frame 122, total packets: 73
+2025-06-16 17:59:02,471 - INFO - Sent end of frame 122, packet 72/72
+2025-06-16 17:59:02,511 - INFO - Frame 123: Sending 72 packets, total size 98672 bytes
+2025-06-16 17:59:02,511 - INFO - Sent start of frame 123, total packets: 72
+2025-06-16 17:59:02,597 - INFO - Sent end of frame 123, packet 71/71
+2025-06-16 17:59:02,640 - INFO - Frame 124: Sending 72 packets, total size 99359 bytes
+2025-06-16 17:59:02,640 - INFO - Sent start of frame 124, total packets: 72
+2025-06-16 17:59:02,723 - INFO - Sent end of frame 124, packet 71/71
+2025-06-16 17:59:02,778 - INFO - Frame 125: Sending 72 packets, total size 98847 bytes
+2025-06-16 17:59:02,779 - INFO - Sent start of frame 125, total packets: 72
+2025-06-16 17:59:02,869 - INFO - Sent end of frame 125, packet 71/71
+2025-06-16 17:59:02,912 - INFO - Frame 126: Sending 73 packets, total size 100984 bytes
+2025-06-16 17:59:02,912 - INFO - Sent start of frame 126, total packets: 73
+2025-06-16 17:59:02,997 - INFO - Sent end of frame 126, packet 72/72
+2025-06-16 17:59:03,037 - INFO - Frame 127: Sending 72 packets, total size 98998 bytes
+2025-06-16 17:59:03,037 - INFO - Sent start of frame 127, total packets: 72
+2025-06-16 17:59:03,121 - INFO - Sent end of frame 127, packet 71/71
+2025-06-16 17:59:03,164 - INFO - Frame 128: Sending 72 packets, total size 99393 bytes
+2025-06-16 17:59:03,164 - INFO - Sent start of frame 128, total packets: 72
+2025-06-16 17:59:03,249 - INFO - Sent end of frame 128, packet 71/71
+2025-06-16 17:59:03,292 - INFO - Frame 129: Sending 72 packets, total size 98961 bytes
+2025-06-16 17:59:03,293 - INFO - Sent start of frame 129, total packets: 72
+2025-06-16 17:59:03,377 - INFO - Sent end of frame 129, packet 71/71
+2025-06-16 17:59:03,421 - INFO - Frame 130: Sending 73 packets, total size 101027 bytes
+2025-06-16 17:59:03,421 - INFO - Sent start of frame 130, total packets: 73
+2025-06-16 17:59:03,508 - INFO - Sent end of frame 130, packet 72/72
+2025-06-16 17:59:03,551 - INFO - Frame 131: Sending 72 packets, total size 98796 bytes
+2025-06-16 17:59:03,551 - INFO - Sent start of frame 131, total packets: 72
+2025-06-16 17:59:03,635 - INFO - Sent end of frame 131, packet 71/71
+2025-06-16 17:59:03,677 - INFO - Frame 132: Sending 72 packets, total size 99357 bytes
+2025-06-16 17:59:03,677 - INFO - Sent start of frame 132, total packets: 72
+2025-06-16 17:59:03,762 - INFO - Sent end of frame 132, packet 71/71
+2025-06-16 17:59:03,804 - INFO - Frame 133: Sending 72 packets, total size 98951 bytes
+2025-06-16 17:59:03,804 - INFO - Sent start of frame 133, total packets: 72
+2025-06-16 17:59:03,888 - INFO - Sent end of frame 133, packet 71/71
+2025-06-16 17:59:03,954 - INFO - Frame 134: Sending 73 packets, total size 101039 bytes
+2025-06-16 17:59:03,954 - INFO - Sent start of frame 134, total packets: 73
+2025-06-16 17:59:04,050 - INFO - Sent end of frame 134, packet 72/72
+2025-06-16 17:59:04,092 - INFO - Frame 135: Sending 72 packets, total size 98802 bytes
+2025-06-16 17:59:04,092 - INFO - Sent start of frame 135, total packets: 72
+2025-06-16 17:59:04,176 - INFO - Sent end of frame 135, packet 71/71
+2025-06-16 17:59:04,219 - INFO - Frame 136: Sending 72 packets, total size 99106 bytes
+2025-06-16 17:59:04,219 - INFO - Sent start of frame 136, total packets: 72
+2025-06-16 17:59:04,303 - INFO - Sent end of frame 136, packet 71/71
+2025-06-16 17:59:04,343 - INFO - Frame 137: Sending 72 packets, total size 98884 bytes
+2025-06-16 17:59:04,343 - INFO - Sent start of frame 137, total packets: 72
+2025-06-16 17:59:04,425 - INFO - Sent end of frame 137, packet 71/71
+2025-06-16 17:59:04,469 - INFO - Frame 138: Sending 73 packets, total size 100799 bytes
+2025-06-16 17:59:04,469 - INFO - Sent start of frame 138, total packets: 73
+2025-06-16 17:59:04,553 - INFO - Sent end of frame 138, packet 72/72
+2025-06-16 17:59:04,597 - INFO - Frame 139: Sending 72 packets, total size 98733 bytes
+2025-06-16 17:59:04,597 - INFO - Sent start of frame 139, total packets: 72
+2025-06-16 17:59:04,682 - INFO - Sent end of frame 139, packet 71/71
+2025-06-16 17:59:04,724 - INFO - Frame 140: Sending 72 packets, total size 99294 bytes
+2025-06-16 17:59:04,724 - INFO - Sent start of frame 140, total packets: 72
+2025-06-16 17:59:04,810 - INFO - Sent end of frame 140, packet 71/71
+2025-06-16 17:59:04,853 - INFO - Frame 141: Sending 72 packets, total size 99086 bytes
+2025-06-16 17:59:04,854 - INFO - Sent start of frame 141, total packets: 72
+2025-06-16 17:59:04,938 - INFO - Sent end of frame 141, packet 71/71
+2025-06-16 17:59:04,982 - INFO - Frame 142: Sending 73 packets, total size 100942 bytes
+2025-06-16 17:59:04,982 - INFO - Sent start of frame 142, total packets: 73
+2025-06-16 17:59:05,176 - INFO - Sent end of frame 142, packet 72/72
+2025-06-16 17:59:05,220 - INFO - Frame 143: Sending 72 packets, total size 98661 bytes
+2025-06-16 17:59:05,220 - INFO - Sent start of frame 143, total packets: 72
+2025-06-16 17:59:05,304 - INFO - Sent end of frame 143, packet 71/71
+2025-06-16 17:59:05,347 - INFO - Frame 144: Sending 72 packets, total size 99097 bytes
+2025-06-16 17:59:05,347 - INFO - Sent start of frame 144, total packets: 72
+2025-06-16 17:59:05,433 - INFO - Sent end of frame 144, packet 71/71
+2025-06-16 17:59:05,474 - INFO - Frame 145: Sending 72 packets, total size 98875 bytes
+2025-06-16 17:59:05,475 - INFO - Sent start of frame 145, total packets: 72
+2025-06-16 17:59:05,560 - INFO - Sent end of frame 145, packet 71/71
+2025-06-16 17:59:05,603 - INFO - Frame 146: Sending 73 packets, total size 100647 bytes
+2025-06-16 17:59:05,603 - INFO - Sent start of frame 146, total packets: 73
+2025-06-16 17:59:05,687 - INFO - Sent end of frame 146, packet 72/72
+2025-06-16 17:59:05,762 - INFO - Frame 147: Sending 71 packets, total size 98431 bytes
+2025-06-16 17:59:05,762 - INFO - Sent start of frame 147, total packets: 71
+2025-06-16 17:59:05,850 - INFO - Sent end of frame 147, packet 70/70
+2025-06-16 17:59:05,893 - INFO - Frame 148: Sending 72 packets, total size 98850 bytes
+2025-06-16 17:59:05,893 - INFO - Sent start of frame 148, total packets: 72
+2025-06-16 17:59:05,978 - INFO - Sent end of frame 148, packet 71/71
+2025-06-16 17:59:06,023 - INFO - Frame 149: Sending 72 packets, total size 98578 bytes
+2025-06-16 17:59:06,023 - INFO - Sent start of frame 149, total packets: 72
+2025-06-16 17:59:06,110 - INFO - Sent end of frame 149, packet 71/71
+2025-06-16 17:59:06,153 - INFO - Frame 150: Sending 73 packets, total size 100331 bytes
+2025-06-16 17:59:06,153 - INFO - Sent start of frame 150, total packets: 73
+2025-06-16 17:59:06,242 - INFO - Sent end of frame 150, packet 72/72
+2025-06-16 17:59:06,287 - INFO - Frame 151: Sending 71 packets, total size 98297 bytes
+2025-06-16 17:59:06,287 - INFO - Sent start of frame 151, total packets: 71
+2025-06-16 17:59:06,374 - INFO - Sent end of frame 151, packet 70/70
+2025-06-16 17:59:06,418 - INFO - Frame 152: Sending 72 packets, total size 98753 bytes
+2025-06-16 17:59:06,419 - INFO - Sent start of frame 152, total packets: 72
+2025-06-16 17:59:06,504 - INFO - Sent end of frame 152, packet 71/71
+2025-06-16 17:59:06,547 - INFO - Frame 153: Sending 71 packets, total size 98410 bytes
+2025-06-16 17:59:06,547 - INFO - Sent start of frame 153, total packets: 71
+2025-06-16 17:59:06,633 - INFO - Sent end of frame 153, packet 70/70
+2025-06-16 17:59:06,674 - INFO - Frame 154: Sending 73 packets, total size 100442 bytes
+2025-06-16 17:59:06,674 - INFO - Sent start of frame 154, total packets: 73
+2025-06-16 17:59:06,763 - INFO - Sent end of frame 154, packet 72/72
+2025-06-16 17:59:06,806 - INFO - Frame 155: Sending 71 packets, total size 98124 bytes
+2025-06-16 17:59:06,806 - INFO - Sent start of frame 155, total packets: 71
+2025-06-16 17:59:06,890 - INFO - Sent end of frame 155, packet 70/70
+2025-06-16 17:59:06,933 - INFO - Frame 156: Sending 71 packets, total size 98536 bytes
+2025-06-16 17:59:06,934 - INFO - Sent start of frame 156, total packets: 71
+2025-06-16 17:59:07,019 - INFO - Sent end of frame 156, packet 70/70
+2025-06-16 17:59:07,062 - INFO - Frame 157: Sending 71 packets, total size 98067 bytes
+2025-06-16 17:59:07,062 - INFO - Sent start of frame 157, total packets: 71
+2025-06-16 17:59:07,150 - INFO - Sent end of frame 157, packet 70/70
+2025-06-16 17:59:07,193 - INFO - Frame 158: Sending 73 packets, total size 100114 bytes
+2025-06-16 17:59:07,193 - INFO - Sent start of frame 158, total packets: 73
+2025-06-16 17:59:07,282 - INFO - Sent end of frame 158, packet 72/72
+2025-06-16 17:59:07,327 - INFO - Frame 159: Sending 71 packets, total size 97825 bytes
+2025-06-16 17:59:07,327 - INFO - Sent start of frame 159, total packets: 71
+2025-06-16 17:59:07,414 - INFO - Sent end of frame 159, packet 70/70
+2025-06-16 17:59:07,457 - INFO - Frame 160: Sending 71 packets, total size 98348 bytes
+2025-06-16 17:59:07,458 - INFO - Sent start of frame 160, total packets: 71
+2025-06-16 17:59:07,542 - INFO - Sent end of frame 160, packet 70/70
+2025-06-16 17:59:07,587 - INFO - Frame 161: Sending 71 packets, total size 97949 bytes
+2025-06-16 17:59:07,588 - INFO - Sent start of frame 161, total packets: 71
+2025-06-16 17:59:07,675 - INFO - Sent end of frame 161, packet 70/70
+2025-06-16 17:59:07,718 - INFO - Frame 162: Sending 72 packets, total size 99772 bytes
+2025-06-16 17:59:07,719 - INFO - Sent start of frame 162, total packets: 72
+2025-06-16 17:59:07,806 - INFO - Sent end of frame 162, packet 71/71
+2025-06-16 17:59:07,849 - INFO - Frame 163: Sending 71 packets, total size 97902 bytes
+2025-06-16 17:59:07,849 - INFO - Sent start of frame 163, total packets: 71
+2025-06-16 17:59:07,934 - INFO - Sent end of frame 163, packet 70/70
+2025-06-16 17:59:07,977 - INFO - Frame 164: Sending 71 packets, total size 98125 bytes
+2025-06-16 17:59:07,978 - INFO - Sent start of frame 164, total packets: 71
+2025-06-16 17:59:08,063 - INFO - Sent end of frame 164, packet 70/70
+2025-06-16 17:59:08,106 - INFO - Frame 165: Sending 71 packets, total size 97859 bytes
+2025-06-16 17:59:08,106 - INFO - Sent start of frame 165, total packets: 71
+2025-06-16 17:59:08,191 - INFO - Sent end of frame 165, packet 70/70
+2025-06-16 17:59:08,236 - INFO - Frame 166: Sending 72 packets, total size 99526 bytes
+2025-06-16 17:59:08,236 - INFO - Sent start of frame 166, total packets: 72
+2025-06-16 17:59:08,323 - INFO - Sent end of frame 166, packet 71/71
+2025-06-16 17:59:08,363 - INFO - Frame 167: Sending 71 packets, total size 97397 bytes
+2025-06-16 17:59:08,363 - INFO - Sent start of frame 167, total packets: 71
+2025-06-16 17:59:08,429 - INFO - 
+Stopping video sender...
+2025-06-16 17:59:08,440 - INFO - Sender stopped
+2025-06-16 18:05:56,588 - INFO - === Starting new sender session ===
+2025-06-16 18:05:56,588 - INFO - Starting video sender...
+2025-06-16 18:05:56,588 - INFO - Streaming test_video.mp4 to 127.0.0.1:5005
+2025-06-16 18:05:56,589 - INFO - Press Ctrl+C to stop
+2025-06-16 18:05:56,650 - INFO - Starting video stream from test_video.mp4
+2025-06-16 18:05:56,650 - INFO - Sending to 127.0.0.1:5005
+2025-06-16 18:05:56,695 - INFO - Frame 0: Sending 69 packets, total size 94493 bytes
+2025-06-16 18:05:56,695 - INFO - Sent start of frame 0, total packets: 69
+2025-06-16 18:05:56,776 - INFO - Sent end of frame 0, packet 68/68
+2025-06-16 18:05:56,822 - INFO - Frame 1: Sending 67 packets, total size 92956 bytes
+2025-06-16 18:05:56,822 - INFO - Sent start of frame 1, total packets: 67
+2025-06-16 18:05:56,902 - INFO - Sent end of frame 1, packet 66/66
+2025-06-16 18:05:56,948 - INFO - Frame 2: Sending 68 packets, total size 93132 bytes
+2025-06-16 18:05:56,948 - INFO - Sent start of frame 2, total packets: 68
+2025-06-16 18:05:57,030 - INFO - Sent end of frame 2, packet 67/67
+2025-06-16 18:05:57,074 - INFO - Frame 3: Sending 68 packets, total size 93147 bytes
+2025-06-16 18:05:57,074 - INFO - Sent start of frame 3, total packets: 68
+2025-06-16 18:05:57,154 - INFO - Sent end of frame 3, packet 67/67
+2025-06-16 18:05:57,198 - INFO - Frame 4: Sending 69 packets, total size 94667 bytes
+2025-06-16 18:05:57,198 - INFO - Sent start of frame 4, total packets: 69
+2025-06-16 18:05:57,280 - INFO - Sent end of frame 4, packet 68/68
+2025-06-16 18:05:57,325 - INFO - Frame 5: Sending 68 packets, total size 93158 bytes
+2025-06-16 18:05:57,325 - INFO - Sent start of frame 5, total packets: 68
+2025-06-16 18:05:57,406 - INFO - Sent end of frame 5, packet 67/67
+2025-06-16 18:05:57,451 - INFO - Frame 6: Sending 68 packets, total size 93527 bytes
+2025-06-16 18:05:57,451 - INFO - Sent start of frame 6, total packets: 68
+2025-06-16 18:05:57,531 - INFO - Sent end of frame 6, packet 67/67
+2025-06-16 18:05:57,574 - INFO - Frame 7: Sending 68 packets, total size 93366 bytes
+2025-06-16 18:05:57,574 - INFO - Sent start of frame 7, total packets: 68
+2025-06-16 18:05:57,656 - INFO - Sent end of frame 7, packet 67/67
+2025-06-16 18:05:57,702 - INFO - Frame 8: Sending 69 packets, total size 95007 bytes
+2025-06-16 18:05:57,702 - INFO - Sent start of frame 8, total packets: 69
+2025-06-16 18:05:57,781 - INFO - Sent end of frame 8, packet 68/68
+2025-06-16 18:05:57,825 - INFO - Frame 9: Sending 68 packets, total size 93477 bytes
+2025-06-16 18:05:57,825 - INFO - Sent start of frame 9, total packets: 68
+2025-06-16 18:05:57,981 - INFO - Sent end of frame 9, packet 67/67
+2025-06-16 18:05:58,026 - INFO - Frame 10: Sending 68 packets, total size 93848 bytes
+2025-06-16 18:05:58,026 - INFO - Sent start of frame 10, total packets: 68
+2025-06-16 18:05:58,106 - INFO - Sent end of frame 10, packet 67/67
+2025-06-16 18:05:58,151 - INFO - Frame 11: Sending 68 packets, total size 93970 bytes
+2025-06-16 18:05:58,151 - INFO - Sent start of frame 11, total packets: 68
+2025-06-16 18:05:58,230 - INFO - Sent end of frame 11, packet 67/67
+2025-06-16 18:05:58,273 - INFO - Frame 12: Sending 69 packets, total size 95474 bytes
+2025-06-16 18:05:58,273 - INFO - Sent start of frame 12, total packets: 69
+2025-06-16 18:05:58,354 - INFO - Sent end of frame 12, packet 68/68
+2025-06-16 18:05:58,395 - INFO - Frame 13: Sending 68 packets, total size 93833 bytes
+2025-06-16 18:05:58,395 - INFO - Sent start of frame 13, total packets: 68
+2025-06-16 18:05:58,475 - INFO - Sent end of frame 13, packet 67/67
+2025-06-16 18:05:58,516 - INFO - Frame 14: Sending 69 packets, total size 94598 bytes
+2025-06-16 18:05:58,516 - INFO - Sent start of frame 14, total packets: 69
+2025-06-16 18:05:58,598 - INFO - Sent end of frame 14, packet 68/68
+2025-06-16 18:05:58,642 - INFO - Frame 15: Sending 69 packets, total size 94386 bytes
+2025-06-16 18:05:58,643 - INFO - Sent start of frame 15, total packets: 69
+2025-06-16 18:05:58,724 - INFO - Sent end of frame 15, packet 68/68
+2025-06-16 18:05:58,767 - INFO - Frame 16: Sending 70 packets, total size 95828 bytes
+2025-06-16 18:05:58,767 - INFO - Sent start of frame 16, total packets: 70
+2025-06-16 18:05:58,850 - INFO - Sent end of frame 16, packet 69/69
+2025-06-16 18:05:58,892 - INFO - Frame 17: Sending 68 packets, total size 94336 bytes
+2025-06-16 18:05:58,893 - INFO - Sent start of frame 17, total packets: 68
+2025-06-16 18:05:58,973 - INFO - Sent end of frame 17, packet 67/67
+2025-06-16 18:05:59,016 - INFO - Frame 18: Sending 69 packets, total size 94666 bytes
+2025-06-16 18:05:59,016 - INFO - Sent start of frame 18, total packets: 69
+2025-06-16 18:05:59,096 - INFO - Sent end of frame 18, packet 68/68
+2025-06-16 18:05:59,141 - INFO - Frame 19: Sending 69 packets, total size 94411 bytes
+2025-06-16 18:05:59,141 - INFO - Sent start of frame 19, total packets: 69
+2025-06-16 18:05:59,224 - INFO - Sent end of frame 19, packet 68/68
+2025-06-16 18:05:59,269 - INFO - Frame 20: Sending 70 packets, total size 96236 bytes
+2025-06-16 18:05:59,269 - INFO - Sent start of frame 20, total packets: 70
+2025-06-16 18:05:59,473 - INFO - Sent end of frame 20, packet 69/69
+2025-06-16 18:05:59,520 - INFO - Frame 21: Sending 69 packets, total size 94570 bytes
+2025-06-16 18:05:59,520 - INFO - Sent start of frame 21, total packets: 69
+2025-06-16 18:05:59,601 - INFO - Sent end of frame 21, packet 68/68
+2025-06-16 18:05:59,644 - INFO - Frame 22: Sending 69 packets, total size 94916 bytes
+2025-06-16 18:05:59,644 - INFO - Sent start of frame 22, total packets: 69
+2025-06-16 18:05:59,726 - INFO - Sent end of frame 22, packet 68/68
+2025-06-16 18:05:59,766 - INFO - Frame 23: Sending 69 packets, total size 94809 bytes
+2025-06-16 18:05:59,766 - INFO - Sent start of frame 23, total packets: 69
+2025-06-16 18:05:59,886 - INFO - Sent end of frame 23, packet 68/68
+2025-06-16 18:05:59,927 - INFO - Frame 24: Sending 70 packets, total size 96397 bytes
+2025-06-16 18:05:59,927 - INFO - Sent start of frame 24, total packets: 70
+2025-06-16 18:06:00,010 - INFO - Sent end of frame 24, packet 69/69
+2025-06-16 18:06:00,055 - INFO - Frame 25: Sending 69 packets, total size 94760 bytes
+2025-06-16 18:06:00,055 - INFO - Sent start of frame 25, total packets: 69
+2025-06-16 18:06:00,135 - INFO - Sent end of frame 25, packet 68/68
+2025-06-16 18:06:00,180 - INFO - Frame 26: Sending 69 packets, total size 95027 bytes
+2025-06-16 18:06:00,180 - INFO - Sent start of frame 26, total packets: 69
+2025-06-16 18:06:00,262 - INFO - Sent end of frame 26, packet 68/68
+2025-06-16 18:06:00,307 - INFO - Frame 27: Sending 69 packets, total size 94748 bytes
+2025-06-16 18:06:00,307 - INFO - Sent start of frame 27, total packets: 69
+2025-06-16 18:06:00,390 - INFO - Sent end of frame 27, packet 68/68
+2025-06-16 18:06:00,433 - INFO - Frame 28: Sending 70 packets, total size 96578 bytes
+2025-06-16 18:06:00,434 - INFO - Sent start of frame 28, total packets: 70
+2025-06-16 18:06:00,515 - INFO - Sent end of frame 28, packet 69/69
+2025-06-16 18:06:00,559 - INFO - Frame 29: Sending 69 packets, total size 94906 bytes
+2025-06-16 18:06:00,560 - INFO - Sent start of frame 29, total packets: 69
+2025-06-16 18:06:00,641 - INFO - Sent end of frame 29, packet 68/68
+2025-06-16 18:06:00,684 - INFO - Frame 30: Sending 69 packets, total size 95342 bytes
+2025-06-16 18:06:00,684 - INFO - Sent start of frame 30, total packets: 69
+2025-06-16 18:06:00,763 - INFO - Sent end of frame 30, packet 68/68
+2025-06-16 18:06:00,807 - INFO - Frame 31: Sending 69 packets, total size 95146 bytes
+2025-06-16 18:06:00,807 - INFO - Sent start of frame 31, total packets: 69
+2025-06-16 18:06:00,888 - INFO - Sent end of frame 31, packet 68/68
+2025-06-16 18:06:00,932 - INFO - Frame 32: Sending 70 packets, total size 96764 bytes
+2025-06-16 18:06:00,932 - INFO - Sent start of frame 32, total packets: 70
+2025-06-16 18:06:01,015 - INFO - Sent end of frame 32, packet 69/69
+2025-06-16 18:06:01,058 - INFO - Frame 33: Sending 69 packets, total size 94993 bytes
+2025-06-16 18:06:01,058 - INFO - Sent start of frame 33, total packets: 69
+2025-06-16 18:06:01,140 - INFO - Sent end of frame 33, packet 68/68
+2025-06-16 18:06:01,184 - INFO - Frame 34: Sending 69 packets, total size 95424 bytes
+2025-06-16 18:06:01,184 - INFO - Sent start of frame 34, total packets: 69
+2025-06-16 18:06:01,265 - INFO - Sent end of frame 34, packet 68/68
+2025-06-16 18:06:01,308 - INFO - Frame 35: Sending 69 packets, total size 95279 bytes
+2025-06-16 18:06:01,308 - INFO - Sent start of frame 35, total packets: 69
+2025-06-16 18:06:01,389 - INFO - Sent end of frame 35, packet 68/68
+2025-06-16 18:06:01,433 - INFO - Frame 36: Sending 70 packets, total size 96940 bytes
+2025-06-16 18:06:01,433 - INFO - Sent start of frame 36, total packets: 70
+2025-06-16 18:06:01,518 - INFO - Sent end of frame 36, packet 69/69
+2025-06-16 18:06:01,562 - INFO - Frame 37: Sending 69 packets, total size 95030 bytes
+2025-06-16 18:06:01,562 - INFO - Sent start of frame 37, total packets: 69
+2025-06-16 18:06:01,644 - INFO - Sent end of frame 37, packet 68/68
+2025-06-16 18:06:01,686 - INFO - Frame 38: Sending 69 packets, total size 95522 bytes
+2025-06-16 18:06:01,687 - INFO - Sent start of frame 38, total packets: 69
+2025-06-16 18:06:01,768 - INFO - Sent end of frame 38, packet 68/68
+2025-06-16 18:06:01,812 - INFO - Frame 39: Sending 69 packets, total size 95203 bytes
+2025-06-16 18:06:01,813 - INFO - Sent start of frame 39, total packets: 69
+2025-06-16 18:06:01,894 - INFO - Sent end of frame 39, packet 68/68
+2025-06-16 18:06:01,937 - INFO - Frame 40: Sending 70 packets, total size 97059 bytes
+2025-06-16 18:06:01,937 - INFO - Sent start of frame 40, total packets: 70
+2025-06-16 18:06:02,021 - INFO - Sent end of frame 40, packet 69/69
+2025-06-16 18:06:02,065 - INFO - Frame 41: Sending 69 packets, total size 95215 bytes
+2025-06-16 18:06:02,066 - INFO - Sent start of frame 41, total packets: 69
+2025-06-16 18:06:02,202 - INFO - Sent end of frame 41, packet 68/68
+2025-06-16 18:06:02,242 - INFO - Frame 42: Sending 69 packets, total size 95722 bytes
+2025-06-16 18:06:02,242 - INFO - Sent start of frame 42, total packets: 69
+2025-06-16 18:06:02,324 - INFO - Sent end of frame 42, packet 68/68
+2025-06-16 18:06:02,367 - INFO - Frame 43: Sending 69 packets, total size 95676 bytes
+2025-06-16 18:06:02,367 - INFO - Sent start of frame 43, total packets: 69
+2025-06-16 18:06:02,447 - INFO - Sent end of frame 43, packet 68/68
+2025-06-16 18:06:02,490 - INFO - Frame 44: Sending 71 packets, total size 97417 bytes
+2025-06-16 18:06:02,490 - INFO - Sent start of frame 44, total packets: 71
+2025-06-16 18:06:02,573 - INFO - Sent end of frame 44, packet 70/70
+2025-06-16 18:06:02,617 - INFO - Frame 45: Sending 69 packets, total size 95542 bytes
+2025-06-16 18:06:02,617 - INFO - Sent start of frame 45, total packets: 69
+2025-06-16 18:06:02,698 - INFO - Sent end of frame 45, packet 68/68
+2025-06-16 18:06:02,742 - INFO - Frame 46: Sending 70 packets, total size 95822 bytes
+2025-06-16 18:06:02,742 - INFO - Sent start of frame 46, total packets: 70
+2025-06-16 18:06:02,824 - INFO - Sent end of frame 46, packet 69/69
+2025-06-16 18:06:02,869 - INFO - Frame 47: Sending 69 packets, total size 95623 bytes
+2025-06-16 18:06:02,870 - INFO - Sent start of frame 47, total packets: 69
+2025-06-16 18:06:02,951 - INFO - Sent end of frame 47, packet 68/68
+2025-06-16 18:06:02,990 - INFO - Frame 48: Sending 71 packets, total size 97300 bytes
+2025-06-16 18:06:02,990 - INFO - Sent start of frame 48, total packets: 71
+2025-06-16 18:06:03,073 - INFO - Sent end of frame 48, packet 70/70
+2025-06-16 18:06:03,116 - INFO - Frame 49: Sending 69 packets, total size 95648 bytes
+2025-06-16 18:06:03,116 - INFO - Sent start of frame 49, total packets: 69
+2025-06-16 18:06:03,198 - INFO - Sent end of frame 49, packet 68/68
+2025-06-16 18:06:03,242 - INFO - Frame 50: Sending 70 packets, total size 95809 bytes
+2025-06-16 18:06:03,243 - INFO - Sent start of frame 50, total packets: 70
+2025-06-16 18:06:03,322 - INFO - Sent end of frame 50, packet 69/69
+2025-06-16 18:06:03,365 - INFO - Frame 51: Sending 70 packets, total size 95900 bytes
+2025-06-16 18:06:03,366 - INFO - Sent start of frame 51, total packets: 70
+2025-06-16 18:06:03,533 - INFO - Sent end of frame 51, packet 69/69
+2025-06-16 18:06:03,578 - INFO - Frame 52: Sending 71 packets, total size 97922 bytes
+2025-06-16 18:06:03,578 - INFO - Sent start of frame 52, total packets: 71
+2025-06-16 18:06:03,663 - INFO - Sent end of frame 52, packet 70/70
+2025-06-16 18:06:03,707 - INFO - Frame 53: Sending 70 packets, total size 95942 bytes
+2025-06-16 18:06:03,707 - INFO - Sent start of frame 53, total packets: 70
+2025-06-16 18:06:03,787 - INFO - Sent end of frame 53, packet 69/69
+2025-06-16 18:06:03,826 - INFO - Frame 54: Sending 70 packets, total size 96733 bytes
+2025-06-16 18:06:03,827 - INFO - Sent start of frame 54, total packets: 70
+2025-06-16 18:06:03,959 - INFO - Sent end of frame 54, packet 69/69
+2025-06-16 18:06:03,999 - INFO - Frame 55: Sending 70 packets, total size 96387 bytes
+2025-06-16 18:06:03,999 - INFO - Sent start of frame 55, total packets: 70
+2025-06-16 18:06:04,150 - INFO - Sent end of frame 55, packet 69/69
+2025-06-16 18:06:04,207 - INFO - Frame 56: Sending 71 packets, total size 98421 bytes
+2025-06-16 18:06:04,207 - INFO - Sent start of frame 56, total packets: 71
+2025-06-16 18:06:04,290 - INFO - Sent end of frame 56, packet 70/70
+2025-06-16 18:06:04,334 - INFO - Frame 57: Sending 70 packets, total size 96440 bytes
+2025-06-16 18:06:04,334 - INFO - Sent start of frame 57, total packets: 70
+2025-06-16 18:06:04,415 - INFO - Sent end of frame 57, packet 69/69
+2025-06-16 18:06:04,456 - INFO - Frame 58: Sending 70 packets, total size 96662 bytes
+2025-06-16 18:06:04,457 - INFO - Sent start of frame 58, total packets: 70
+2025-06-16 18:06:04,625 - INFO - Sent end of frame 58, packet 69/69
+2025-06-16 18:06:04,672 - INFO - Frame 59: Sending 70 packets, total size 96335 bytes
+2025-06-16 18:06:04,672 - INFO - Sent start of frame 59, total packets: 70
+2025-06-16 18:06:04,754 - INFO - Sent end of frame 59, packet 69/69
+2025-06-16 18:06:04,797 - INFO - Frame 60: Sending 71 packets, total size 98130 bytes
+2025-06-16 18:06:04,797 - INFO - Sent start of frame 60, total packets: 71
+2025-06-16 18:06:04,880 - INFO - Sent end of frame 60, packet 70/70
+2025-06-16 18:06:04,923 - INFO - Frame 61: Sending 70 packets, total size 96130 bytes
+2025-06-16 18:06:04,923 - INFO - Sent start of frame 61, total packets: 70
+2025-06-16 18:06:05,005 - INFO - Sent end of frame 61, packet 69/69
+2025-06-16 18:06:05,048 - INFO - Frame 62: Sending 70 packets, total size 96667 bytes
+2025-06-16 18:06:05,048 - INFO - Sent start of frame 62, total packets: 70
+2025-06-16 18:06:05,132 - INFO - Sent end of frame 62, packet 69/69
+2025-06-16 18:06:05,175 - INFO - Frame 63: Sending 70 packets, total size 96449 bytes
+2025-06-16 18:06:05,175 - INFO - Sent start of frame 63, total packets: 70
+2025-06-16 18:06:05,262 - INFO - Sent end of frame 63, packet 69/69
+2025-06-16 18:06:05,316 - INFO - Frame 64: Sending 72 packets, total size 98571 bytes
+2025-06-16 18:06:05,316 - INFO - Sent start of frame 64, total packets: 72
+2025-06-16 18:06:05,404 - INFO - Sent end of frame 64, packet 71/71
+2025-06-16 18:06:05,448 - INFO - Frame 65: Sending 70 packets, total size 96594 bytes
+2025-06-16 18:06:05,448 - INFO - Sent start of frame 65, total packets: 70
+2025-06-16 18:06:05,534 - INFO - Sent end of frame 65, packet 69/69
+2025-06-16 18:06:05,575 - INFO - Frame 66: Sending 70 packets, total size 96855 bytes
+2025-06-16 18:06:05,575 - INFO - Sent start of frame 66, total packets: 70
+2025-06-16 18:06:05,660 - INFO - Sent end of frame 66, packet 69/69
+2025-06-16 18:06:05,707 - INFO - Frame 67: Sending 70 packets, total size 96776 bytes
+2025-06-16 18:06:05,707 - INFO - Sent start of frame 67, total packets: 70
+2025-06-16 18:06:05,795 - INFO - Sent end of frame 67, packet 69/69
+2025-06-16 18:06:05,838 - INFO - Frame 68: Sending 72 packets, total size 98861 bytes
+2025-06-16 18:06:05,839 - INFO - Sent start of frame 68, total packets: 72
+2025-06-16 18:06:05,928 - INFO - Sent end of frame 68, packet 71/71
+2025-06-16 18:06:05,971 - INFO - Frame 69: Sending 70 packets, total size 96489 bytes
+2025-06-16 18:06:05,971 - INFO - Sent start of frame 69, total packets: 70
+2025-06-16 18:06:06,058 - INFO - Sent end of frame 69, packet 69/69
+2025-06-16 18:06:06,100 - INFO - Frame 70: Sending 70 packets, total size 97117 bytes
+2025-06-16 18:06:06,100 - INFO - Sent start of frame 70, total packets: 70
+2025-06-16 18:06:06,184 - INFO - Sent end of frame 70, packet 69/69
+2025-06-16 18:06:06,226 - INFO - Frame 71: Sending 70 packets, total size 97032 bytes
+2025-06-16 18:06:06,226 - INFO - Sent start of frame 71, total packets: 70
+2025-06-16 18:06:06,309 - INFO - Sent end of frame 71, packet 69/69
+2025-06-16 18:06:06,353 - INFO - Frame 72: Sending 72 packets, total size 99224 bytes
+2025-06-16 18:06:06,353 - INFO - Sent start of frame 72, total packets: 72
+2025-06-16 18:06:06,439 - INFO - Sent end of frame 72, packet 71/71
+2025-06-16 18:06:06,483 - INFO - Frame 73: Sending 71 packets, total size 97389 bytes
+2025-06-16 18:06:06,483 - INFO - Sent start of frame 73, total packets: 71
+2025-06-16 18:06:06,569 - INFO - Sent end of frame 73, packet 70/70
+2025-06-16 18:06:06,577 - INFO - 
+Stopping video sender...
+2025-06-16 18:06:06,590 - INFO - Sender stopped
+2025-06-16 18:06:35,051 - INFO - === Starting new sender session ===
+2025-06-16 18:06:35,051 - INFO - Starting video sender...
+2025-06-16 18:06:35,051 - INFO - Streaming test_video.mp4 to 127.0.0.1:5005
+2025-06-16 18:06:35,051 - INFO - Press Ctrl+C to stop
+2025-06-16 18:06:35,077 - INFO - Starting video stream from test_video.mp4
+2025-06-16 18:06:35,077 - INFO - Sending to 127.0.0.1:5005
+2025-06-16 18:06:35,106 - INFO - Frame 0: Sending 69 packets, total size 94493 bytes
+2025-06-16 18:06:35,106 - INFO - Sent start of frame 0, total packets: 69
+2025-06-16 18:06:35,188 - INFO - Sent end of frame 0, packet 68/68
+2025-06-16 18:06:35,233 - INFO - Frame 1: Sending 67 packets, total size 92956 bytes
+2025-06-16 18:06:35,234 - INFO - Sent start of frame 1, total packets: 67
+2025-06-16 18:06:35,329 - INFO - Sent end of frame 1, packet 66/66
+2025-06-16 18:06:35,381 - INFO - Frame 2: Sending 68 packets, total size 93132 bytes
+2025-06-16 18:06:35,382 - INFO - Sent start of frame 2, total packets: 68
+2025-06-16 18:06:35,463 - INFO - Sent end of frame 2, packet 67/67
+2025-06-16 18:06:35,508 - INFO - Frame 3: Sending 68 packets, total size 93147 bytes
+2025-06-16 18:06:35,508 - INFO - Sent start of frame 3, total packets: 68
+2025-06-16 18:06:35,588 - INFO - Sent end of frame 3, packet 67/67
+2025-06-16 18:06:35,628 - INFO - Frame 4: Sending 69 packets, total size 94667 bytes
+2025-06-16 18:06:35,628 - INFO - Sent start of frame 4, total packets: 69
+2025-06-16 18:06:35,708 - INFO - Sent end of frame 4, packet 68/68
+2025-06-16 18:06:35,752 - INFO - Frame 5: Sending 68 packets, total size 93158 bytes
+2025-06-16 18:06:35,752 - INFO - Sent start of frame 5, total packets: 68
+2025-06-16 18:06:35,833 - INFO - Sent end of frame 5, packet 67/67
+2025-06-16 18:06:35,875 - INFO - Frame 6: Sending 68 packets, total size 93527 bytes
+2025-06-16 18:06:35,875 - INFO - Sent start of frame 6, total packets: 68
+2025-06-16 18:06:35,957 - INFO - Sent end of frame 6, packet 67/67
+2025-06-16 18:06:36,001 - INFO - Frame 7: Sending 68 packets, total size 93366 bytes
+2025-06-16 18:06:36,002 - INFO - Sent start of frame 7, total packets: 68
+2025-06-16 18:06:36,081 - INFO - Sent end of frame 7, packet 67/67
+2025-06-16 18:06:36,125 - INFO - Frame 8: Sending 69 packets, total size 95007 bytes
+2025-06-16 18:06:36,125 - INFO - Sent start of frame 8, total packets: 69
+2025-06-16 18:06:36,206 - INFO - Sent end of frame 8, packet 68/68
+2025-06-16 18:06:36,253 - INFO - Frame 9: Sending 68 packets, total size 93477 bytes
+2025-06-16 18:06:36,253 - INFO - Sent start of frame 9, total packets: 68
+2025-06-16 18:06:36,424 - INFO - Sent end of frame 9, packet 67/67
+2025-06-16 18:06:36,471 - INFO - Frame 10: Sending 68 packets, total size 93848 bytes
+2025-06-16 18:06:36,471 - INFO - Sent start of frame 10, total packets: 68
+2025-06-16 18:06:36,552 - INFO - Sent end of frame 10, packet 67/67
+2025-06-16 18:06:36,595 - INFO - Frame 11: Sending 68 packets, total size 93970 bytes
+2025-06-16 18:06:36,596 - INFO - Sent start of frame 11, total packets: 68
+2025-06-16 18:06:36,676 - INFO - Sent end of frame 11, packet 67/67
+2025-06-16 18:06:36,720 - INFO - Frame 12: Sending 69 packets, total size 95474 bytes
+2025-06-16 18:06:36,720 - INFO - Sent start of frame 12, total packets: 69
+2025-06-16 18:06:36,801 - INFO - Sent end of frame 12, packet 68/68
+2025-06-16 18:06:36,844 - INFO - Frame 13: Sending 68 packets, total size 93833 bytes
+2025-06-16 18:06:36,844 - INFO - Sent start of frame 13, total packets: 68
+2025-06-16 18:06:36,926 - INFO - Sent end of frame 13, packet 67/67
+2025-06-16 18:06:36,970 - INFO - Frame 14: Sending 69 packets, total size 94598 bytes
+2025-06-16 18:06:36,970 - INFO - Sent start of frame 14, total packets: 69
+2025-06-16 18:06:37,051 - INFO - Sent end of frame 14, packet 68/68
+2025-06-16 18:06:37,094 - INFO - Frame 15: Sending 69 packets, total size 94386 bytes
+2025-06-16 18:06:37,094 - INFO - Sent start of frame 15, total packets: 69
+2025-06-16 18:06:37,175 - INFO - Sent end of frame 15, packet 68/68
+2025-06-16 18:06:37,218 - INFO - Frame 16: Sending 70 packets, total size 95828 bytes
+2025-06-16 18:06:37,219 - INFO - Sent start of frame 16, total packets: 70
+2025-06-16 18:06:37,301 - INFO - Sent end of frame 16, packet 69/69
+2025-06-16 18:06:37,345 - INFO - Frame 17: Sending 68 packets, total size 94336 bytes
+2025-06-16 18:06:37,346 - INFO - Sent start of frame 17, total packets: 68
+2025-06-16 18:06:37,426 - INFO - Sent end of frame 17, packet 67/67
+2025-06-16 18:06:37,467 - INFO - Frame 18: Sending 69 packets, total size 94666 bytes
+2025-06-16 18:06:37,468 - INFO - Sent start of frame 18, total packets: 69
+2025-06-16 18:06:37,550 - INFO - Sent end of frame 18, packet 68/68
+2025-06-16 18:06:37,593 - INFO - Frame 19: Sending 69 packets, total size 94411 bytes
+2025-06-16 18:06:37,593 - INFO - Sent start of frame 19, total packets: 69
+2025-06-16 18:06:37,673 - INFO - Sent end of frame 19, packet 68/68
+2025-06-16 18:06:37,718 - INFO - Frame 20: Sending 70 packets, total size 96236 bytes
+2025-06-16 18:06:37,718 - INFO - Sent start of frame 20, total packets: 70
+2025-06-16 18:06:37,802 - INFO - Sent end of frame 20, packet 69/69
+2025-06-16 18:06:37,846 - INFO - Frame 21: Sending 69 packets, total size 94570 bytes
+2025-06-16 18:06:37,847 - INFO - Sent start of frame 21, total packets: 69
+2025-06-16 18:06:37,928 - INFO - Sent end of frame 21, packet 68/68
+2025-06-16 18:06:37,972 - INFO - Frame 22: Sending 69 packets, total size 94916 bytes
+2025-06-16 18:06:37,972 - INFO - Sent start of frame 22, total packets: 69
+2025-06-16 18:06:38,054 - INFO - Sent end of frame 22, packet 68/68
+2025-06-16 18:06:38,095 - INFO - Frame 23: Sending 69 packets, total size 94809 bytes
+2025-06-16 18:06:38,095 - INFO - Sent start of frame 23, total packets: 69
+2025-06-16 18:06:38,176 - INFO - Sent end of frame 23, packet 68/68
+2025-06-16 18:06:38,218 - INFO - Frame 24: Sending 70 packets, total size 96397 bytes
+2025-06-16 18:06:38,218 - INFO - Sent start of frame 24, total packets: 70
+2025-06-16 18:06:38,352 - INFO - Sent end of frame 24, packet 69/69
+2025-06-16 18:06:38,394 - INFO - Frame 25: Sending 69 packets, total size 94760 bytes
+2025-06-16 18:06:38,395 - INFO - Sent start of frame 25, total packets: 69
+2025-06-16 18:06:38,476 - INFO - Sent end of frame 25, packet 68/68
+2025-06-16 18:06:38,520 - INFO - Frame 26: Sending 69 packets, total size 95027 bytes
+2025-06-16 18:06:38,520 - INFO - Sent start of frame 26, total packets: 69
+2025-06-16 18:06:38,600 - INFO - Sent end of frame 26, packet 68/68
+2025-06-16 18:06:38,644 - INFO - Frame 27: Sending 69 packets, total size 94748 bytes
+2025-06-16 18:06:38,645 - INFO - Sent start of frame 27, total packets: 69
+2025-06-16 18:06:38,726 - INFO - Sent end of frame 27, packet 68/68
+2025-06-16 18:06:38,770 - INFO - Frame 28: Sending 70 packets, total size 96578 bytes
+2025-06-16 18:06:38,770 - INFO - Sent start of frame 28, total packets: 70
+2025-06-16 18:06:38,851 - INFO - Sent end of frame 28, packet 69/69
+2025-06-16 18:06:38,893 - INFO - Frame 29: Sending 69 packets, total size 94906 bytes
+2025-06-16 18:06:38,893 - INFO - Sent start of frame 29, total packets: 69
+2025-06-16 18:06:38,974 - INFO - Sent end of frame 29, packet 68/68
+2025-06-16 18:06:39,017 - INFO - Frame 30: Sending 69 packets, total size 95342 bytes
+2025-06-16 18:06:39,017 - INFO - Sent start of frame 30, total packets: 69
+2025-06-16 18:06:39,098 - INFO - Sent end of frame 30, packet 68/68
+2025-06-16 18:06:39,178 - INFO - Frame 31: Sending 69 packets, total size 95146 bytes
+2025-06-16 18:06:39,178 - INFO - Sent start of frame 31, total packets: 69
+2025-06-16 18:06:39,267 - INFO - Sent end of frame 31, packet 68/68
+2025-06-16 18:06:39,309 - INFO - Frame 32: Sending 70 packets, total size 96764 bytes
+2025-06-16 18:06:39,310 - INFO - Sent start of frame 32, total packets: 70
+2025-06-16 18:06:39,393 - INFO - Sent end of frame 32, packet 69/69
+2025-06-16 18:06:39,436 - INFO - Frame 33: Sending 69 packets, total size 94993 bytes
+2025-06-16 18:06:39,437 - INFO - Sent start of frame 33, total packets: 69
+2025-06-16 18:06:39,520 - INFO - Sent end of frame 33, packet 68/68
+2025-06-16 18:06:39,561 - INFO - Frame 34: Sending 69 packets, total size 95424 bytes
+2025-06-16 18:06:39,561 - INFO - Sent start of frame 34, total packets: 69
+2025-06-16 18:06:39,643 - INFO - Sent end of frame 34, packet 68/68
+2025-06-16 18:06:39,687 - INFO - Frame 35: Sending 69 packets, total size 95279 bytes
+2025-06-16 18:06:39,687 - INFO - Sent start of frame 35, total packets: 69
+2025-06-16 18:06:39,770 - INFO - Sent end of frame 35, packet 68/68
+2025-06-16 18:06:39,812 - INFO - Frame 36: Sending 70 packets, total size 96940 bytes
+2025-06-16 18:06:39,812 - INFO - Sent start of frame 36, total packets: 70
+2025-06-16 18:06:39,898 - INFO - Sent end of frame 36, packet 69/69
+2025-06-16 18:06:39,943 - INFO - Frame 37: Sending 69 packets, total size 95030 bytes
+2025-06-16 18:06:39,943 - INFO - Sent start of frame 37, total packets: 69
+2025-06-16 18:06:40,027 - INFO - Sent end of frame 37, packet 68/68
+2025-06-16 18:06:40,070 - INFO - Frame 38: Sending 69 packets, total size 95522 bytes
+2025-06-16 18:06:40,070 - INFO - Sent start of frame 38, total packets: 69
+2025-06-16 18:06:40,152 - INFO - Sent end of frame 38, packet 68/68
+2025-06-16 18:06:40,196 - INFO - Frame 39: Sending 69 packets, total size 95203 bytes
+2025-06-16 18:06:40,196 - INFO - Sent start of frame 39, total packets: 69
+2025-06-16 18:06:40,279 - INFO - Sent end of frame 39, packet 68/68
+2025-06-16 18:06:40,324 - INFO - Frame 40: Sending 70 packets, total size 97059 bytes
+2025-06-16 18:06:40,324 - INFO - Sent start of frame 40, total packets: 70
+2025-06-16 18:06:40,409 - INFO - Sent end of frame 40, packet 69/69
+2025-06-16 18:06:40,452 - INFO - Frame 41: Sending 69 packets, total size 95215 bytes
+2025-06-16 18:06:40,452 - INFO - Sent start of frame 41, total packets: 69
+2025-06-16 18:06:40,536 - INFO - Sent end of frame 41, packet 68/68
+2025-06-16 18:06:40,576 - INFO - Frame 42: Sending 69 packets, total size 95722 bytes
+2025-06-16 18:06:40,577 - INFO - Sent start of frame 42, total packets: 69
+2025-06-16 18:06:40,661 - INFO - Sent end of frame 42, packet 68/68
+2025-06-16 18:06:40,703 - INFO - Frame 43: Sending 69 packets, total size 95676 bytes
+2025-06-16 18:06:40,703 - INFO - Sent start of frame 43, total packets: 69
+2025-06-16 18:06:40,789 - INFO - Sent end of frame 43, packet 68/68
+2025-06-16 18:06:40,833 - INFO - Frame 44: Sending 71 packets, total size 97417 bytes
+2025-06-16 18:06:40,833 - INFO - Sent start of frame 44, total packets: 71
+2025-06-16 18:06:40,918 - INFO - Sent end of frame 44, packet 70/70
+2025-06-16 18:06:40,964 - INFO - Frame 45: Sending 69 packets, total size 95542 bytes
+2025-06-16 18:06:40,964 - INFO - Sent start of frame 45, total packets: 69
+2025-06-16 18:06:41,046 - INFO - Sent end of frame 45, packet 68/68
+2025-06-16 18:06:41,090 - INFO - Frame 46: Sending 70 packets, total size 95822 bytes
+2025-06-16 18:06:41,090 - INFO - Sent start of frame 46, total packets: 70
+2025-06-16 18:06:41,176 - INFO - Sent end of frame 46, packet 69/69
+2025-06-16 18:06:41,220 - INFO - Frame 47: Sending 69 packets, total size 95623 bytes
+2025-06-16 18:06:41,220 - INFO - Sent start of frame 47, total packets: 69
+2025-06-16 18:06:41,302 - INFO - Sent end of frame 47, packet 68/68
+2025-06-16 18:06:41,345 - INFO - Frame 48: Sending 71 packets, total size 97300 bytes
+2025-06-16 18:06:41,345 - INFO - Sent start of frame 48, total packets: 71
+2025-06-16 18:06:41,432 - INFO - Sent end of frame 48, packet 70/70
+2025-06-16 18:06:41,476 - INFO - Frame 49: Sending 69 packets, total size 95648 bytes
+2025-06-16 18:06:41,476 - INFO - Sent start of frame 49, total packets: 69
+2025-06-16 18:06:41,592 - INFO - Sent end of frame 49, packet 68/68
+2025-06-16 18:06:41,635 - INFO - Frame 50: Sending 70 packets, total size 95809 bytes
+2025-06-16 18:06:41,636 - INFO - Sent start of frame 50, total packets: 70
+2025-06-16 18:06:41,721 - INFO - Sent end of frame 50, packet 69/69
+2025-06-16 18:06:41,761 - INFO - Frame 51: Sending 70 packets, total size 95900 bytes
+2025-06-16 18:06:41,761 - INFO - Sent start of frame 51, total packets: 70
+2025-06-16 18:06:41,843 - INFO - Sent end of frame 51, packet 69/69
+2025-06-16 18:06:41,887 - INFO - Frame 52: Sending 71 packets, total size 97922 bytes
+2025-06-16 18:06:41,887 - INFO - Sent start of frame 52, total packets: 71
+2025-06-16 18:06:41,970 - INFO - Sent end of frame 52, packet 70/70
+2025-06-16 18:06:42,012 - INFO - Frame 53: Sending 70 packets, total size 95942 bytes
+2025-06-16 18:06:42,013 - INFO - Sent start of frame 53, total packets: 70
+2025-06-16 18:06:42,096 - INFO - Sent end of frame 53, packet 69/69
+2025-06-16 18:06:42,139 - INFO - Frame 54: Sending 70 packets, total size 96733 bytes
+2025-06-16 18:06:42,139 - INFO - Sent start of frame 54, total packets: 70
+2025-06-16 18:06:42,223 - INFO - Sent end of frame 54, packet 69/69
+2025-06-16 18:06:42,267 - INFO - Frame 55: Sending 70 packets, total size 96387 bytes
+2025-06-16 18:06:42,267 - INFO - Sent start of frame 55, total packets: 70
+2025-06-16 18:06:42,351 - INFO - Sent end of frame 55, packet 69/69
+2025-06-16 18:06:42,395 - INFO - Frame 56: Sending 71 packets, total size 98421 bytes
+2025-06-16 18:06:42,395 - INFO - Sent start of frame 56, total packets: 71
+2025-06-16 18:06:42,481 - INFO - Sent end of frame 56, packet 70/70
+2025-06-16 18:06:42,526 - INFO - Frame 57: Sending 70 packets, total size 96440 bytes
+2025-06-16 18:06:42,526 - INFO - Sent start of frame 57, total packets: 70
+2025-06-16 18:06:42,614 - INFO - Sent end of frame 57, packet 69/69
+2025-06-16 18:06:42,658 - INFO - Frame 58: Sending 70 packets, total size 96662 bytes
+2025-06-16 18:06:42,658 - INFO - Sent start of frame 58, total packets: 70
+2025-06-16 18:06:42,743 - INFO - Sent end of frame 58, packet 69/69
+2025-06-16 18:06:42,786 - INFO - Frame 59: Sending 70 packets, total size 96335 bytes
+2025-06-16 18:06:42,786 - INFO - Sent start of frame 59, total packets: 70
+2025-06-16 18:06:42,870 - INFO - Sent end of frame 59, packet 69/69
+2025-06-16 18:06:42,914 - INFO - Frame 60: Sending 71 packets, total size 98130 bytes
+2025-06-16 18:06:42,914 - INFO - Sent start of frame 60, total packets: 71
+2025-06-16 18:06:43,000 - INFO - Sent end of frame 60, packet 70/70
+2025-06-16 18:06:43,043 - INFO - Frame 61: Sending 70 packets, total size 96130 bytes
+2025-06-16 18:06:43,043 - INFO - Sent start of frame 61, total packets: 70
+2025-06-16 18:06:43,128 - INFO - Sent end of frame 61, packet 69/69
+2025-06-16 18:06:43,172 - INFO - Frame 62: Sending 70 packets, total size 96667 bytes
+2025-06-16 18:06:43,172 - INFO - Sent start of frame 62, total packets: 70
+2025-06-16 18:06:43,255 - INFO - Sent end of frame 62, packet 69/69
+2025-06-16 18:06:43,300 - INFO - Frame 63: Sending 70 packets, total size 96449 bytes
+2025-06-16 18:06:43,300 - INFO - Sent start of frame 63, total packets: 70
+2025-06-16 18:06:43,384 - INFO - Sent end of frame 63, packet 69/69
+2025-06-16 18:06:43,428 - INFO - Frame 64: Sending 72 packets, total size 98571 bytes
+2025-06-16 18:06:43,428 - INFO - Sent start of frame 64, total packets: 72
+2025-06-16 18:06:43,516 - INFO - Sent end of frame 64, packet 71/71
+2025-06-16 18:06:43,560 - INFO - Frame 65: Sending 70 packets, total size 96594 bytes
+2025-06-16 18:06:43,560 - INFO - Sent start of frame 65, total packets: 70
+2025-06-16 18:06:43,648 - INFO - Sent end of frame 65, packet 69/69
+2025-06-16 18:06:43,693 - INFO - Frame 66: Sending 70 packets, total size 96855 bytes
+2025-06-16 18:06:43,693 - INFO - Sent start of frame 66, total packets: 70
+2025-06-16 18:06:43,779 - INFO - Sent end of frame 66, packet 69/69
+2025-06-16 18:06:43,823 - INFO - Frame 67: Sending 70 packets, total size 96776 bytes
+2025-06-16 18:06:43,824 - INFO - Sent start of frame 67, total packets: 70
+2025-06-16 18:06:43,909 - INFO - Sent end of frame 67, packet 69/69
+2025-06-16 18:06:43,952 - INFO - Frame 68: Sending 72 packets, total size 98861 bytes
+2025-06-16 18:06:43,952 - INFO - Sent start of frame 68, total packets: 72
+2025-06-16 18:06:44,044 - INFO - Sent end of frame 68, packet 71/71
+2025-06-16 18:06:44,088 - INFO - Frame 69: Sending 70 packets, total size 96489 bytes
+2025-06-16 18:06:44,088 - INFO - Sent start of frame 69, total packets: 70
+2025-06-16 18:06:44,174 - INFO - Sent end of frame 69, packet 69/69
+2025-06-16 18:06:44,263 - INFO - Frame 70: Sending 70 packets, total size 97117 bytes
+2025-06-16 18:06:44,264 - INFO - Sent start of frame 70, total packets: 70
+2025-06-16 18:06:44,359 - INFO - Sent end of frame 70, packet 69/69
+2025-06-16 18:06:44,403 - INFO - Frame 71: Sending 70 packets, total size 97032 bytes
+2025-06-16 18:06:44,403 - INFO - Sent start of frame 71, total packets: 70
+2025-06-16 18:06:44,487 - INFO - Sent end of frame 71, packet 69/69
+2025-06-16 18:06:44,531 - INFO - Frame 72: Sending 72 packets, total size 99224 bytes
+2025-06-16 18:06:44,531 - INFO - Sent start of frame 72, total packets: 72
+2025-06-16 18:06:44,617 - INFO - Sent end of frame 72, packet 71/71
+2025-06-16 18:06:44,660 - INFO - Frame 73: Sending 71 packets, total size 97389 bytes
+2025-06-16 18:06:44,660 - INFO - Sent start of frame 73, total packets: 71
+2025-06-16 18:06:44,746 - INFO - Sent end of frame 73, packet 70/70
+2025-06-16 18:06:44,790 - INFO - Frame 74: Sending 71 packets, total size 97688 bytes
+2025-06-16 18:06:44,790 - INFO - Sent start of frame 74, total packets: 71
+2025-06-16 18:06:44,874 - INFO - Sent end of frame 74, packet 70/70
+2025-06-16 18:06:44,919 - INFO - Frame 75: Sending 71 packets, total size 97287 bytes
+2025-06-16 18:06:44,919 - INFO - Sent start of frame 75, total packets: 71
+2025-06-16 18:06:45,005 - INFO - Sent end of frame 75, packet 70/70
+2025-06-16 18:06:45,048 - INFO - Frame 76: Sending 72 packets, total size 99369 bytes
+2025-06-16 18:06:45,048 - INFO - Sent start of frame 76, total packets: 72
+2025-06-16 18:06:45,131 - INFO - Sent end of frame 76, packet 71/71
+2025-06-16 18:06:45,175 - INFO - 
+Stopping video sender...
+2025-06-16 18:06:45,188 - INFO - Sender stopped
+2025-06-16 18:07:16,862 - INFO - === Starting new sender session ===
+2025-06-16 18:07:16,862 - INFO - Starting video sender...
+2025-06-16 18:07:16,862 - INFO - Streaming test_video.mp4 to 127.0.0.1:5005
+2025-06-16 18:07:16,863 - INFO - Press Ctrl+C to stop
+2025-06-16 18:07:16,887 - INFO - Starting video stream from test_video.mp4
+2025-06-16 18:07:16,887 - INFO - Sending to 127.0.0.1:5005
+2025-06-16 18:07:16,919 - INFO - Frame 0: Sending 69 packets, total size 94493 bytes
+2025-06-16 18:07:16,920 - INFO - Sent start of frame 0, total packets: 69
+2025-06-16 18:07:17,001 - INFO - Sent end of frame 0, packet 68/68
+2025-06-16 18:07:17,046 - INFO - Frame 1: Sending 67 packets, total size 92956 bytes
+2025-06-16 18:07:17,046 - INFO - Sent start of frame 1, total packets: 67
+2025-06-16 18:07:17,125 - INFO - Sent end of frame 1, packet 66/66
+2025-06-16 18:07:17,209 - INFO - Frame 2: Sending 68 packets, total size 93132 bytes
+2025-06-16 18:07:17,209 - INFO - Sent start of frame 2, total packets: 68
+2025-06-16 18:07:17,293 - INFO - Sent end of frame 2, packet 67/67
+2025-06-16 18:07:17,337 - INFO - Frame 3: Sending 68 packets, total size 93147 bytes
+2025-06-16 18:07:17,337 - INFO - Sent start of frame 3, total packets: 68
+2025-06-16 18:07:17,417 - INFO - Sent end of frame 3, packet 67/67
+2025-06-16 18:07:17,464 - INFO - Frame 4: Sending 69 packets, total size 94667 bytes
+2025-06-16 18:07:17,464 - INFO - Sent start of frame 4, total packets: 69
+2025-06-16 18:07:17,544 - INFO - Sent end of frame 4, packet 68/68
+2025-06-16 18:07:17,587 - INFO - Frame 5: Sending 68 packets, total size 93158 bytes
+2025-06-16 18:07:17,587 - INFO - Sent start of frame 5, total packets: 68
+2025-06-16 18:07:17,668 - INFO - Sent end of frame 5, packet 67/67
+2025-06-16 18:07:17,711 - INFO - Frame 6: Sending 68 packets, total size 93527 bytes
+2025-06-16 18:07:17,711 - INFO - Sent start of frame 6, total packets: 68
+2025-06-16 18:07:17,792 - INFO - Sent end of frame 6, packet 67/67
+2025-06-16 18:07:17,836 - INFO - Frame 7: Sending 68 packets, total size 93366 bytes
+2025-06-16 18:07:17,836 - INFO - Sent start of frame 7, total packets: 68
+2025-06-16 18:07:17,917 - INFO - Sent end of frame 7, packet 67/67
+2025-06-16 18:07:17,960 - INFO - Frame 8: Sending 69 packets, total size 95007 bytes
+2025-06-16 18:07:17,960 - INFO - Sent start of frame 8, total packets: 69
+2025-06-16 18:07:18,041 - INFO - Sent end of frame 8, packet 68/68
+2025-06-16 18:07:18,086 - INFO - Frame 9: Sending 68 packets, total size 93477 bytes
+2025-06-16 18:07:18,086 - INFO - Sent start of frame 9, total packets: 68
+2025-06-16 18:07:18,166 - INFO - Sent end of frame 9, packet 67/67
+2025-06-16 18:07:18,212 - INFO - Frame 10: Sending 68 packets, total size 93848 bytes
+2025-06-16 18:07:18,212 - INFO - Sent start of frame 10, total packets: 68
+2025-06-16 18:07:18,291 - INFO - Sent end of frame 10, packet 67/67
+2025-06-16 18:07:18,333 - INFO - Frame 11: Sending 68 packets, total size 93970 bytes
+2025-06-16 18:07:18,333 - INFO - Sent start of frame 11, total packets: 68
+2025-06-16 18:07:18,413 - INFO - Sent end of frame 11, packet 67/67
+2025-06-16 18:07:18,457 - INFO - Frame 12: Sending 69 packets, total size 95474 bytes
+2025-06-16 18:07:18,457 - INFO - Sent start of frame 12, total packets: 69
+2025-06-16 18:07:18,539 - INFO - Sent end of frame 12, packet 68/68
+2025-06-16 18:07:18,578 - INFO - Frame 13: Sending 68 packets, total size 93833 bytes
+2025-06-16 18:07:18,578 - INFO - Sent start of frame 13, total packets: 68
+2025-06-16 18:07:18,657 - INFO - Sent end of frame 13, packet 67/67
+2025-06-16 18:07:18,702 - INFO - Frame 14: Sending 69 packets, total size 94598 bytes
+2025-06-16 18:07:18,702 - INFO - Sent start of frame 14, total packets: 69
+2025-06-16 18:07:18,781 - INFO - Sent end of frame 14, packet 68/68
+2025-06-16 18:07:18,826 - INFO - Frame 15: Sending 69 packets, total size 94386 bytes
+2025-06-16 18:07:18,827 - INFO - Sent start of frame 15, total packets: 69
+2025-06-16 18:07:18,908 - INFO - Sent end of frame 15, packet 68/68
+2025-06-16 18:07:18,952 - INFO - Frame 16: Sending 70 packets, total size 95828 bytes
+2025-06-16 18:07:18,952 - INFO - Sent start of frame 16, total packets: 70
+2025-06-16 18:07:19,036 - INFO - Sent end of frame 16, packet 69/69
+2025-06-16 18:07:19,076 - INFO - Frame 17: Sending 68 packets, total size 94336 bytes
+2025-06-16 18:07:19,077 - INFO - Sent start of frame 17, total packets: 68
+2025-06-16 18:07:19,155 - INFO - Sent end of frame 17, packet 67/67
+2025-06-16 18:07:19,197 - INFO - Frame 18: Sending 69 packets, total size 94666 bytes
+2025-06-16 18:07:19,198 - INFO - Sent start of frame 18, total packets: 69
+2025-06-16 18:07:19,279 - INFO - Sent end of frame 18, packet 68/68
+2025-06-16 18:07:19,323 - INFO - Frame 19: Sending 69 packets, total size 94411 bytes
+2025-06-16 18:07:19,323 - INFO - Sent start of frame 19, total packets: 69
+2025-06-16 18:07:19,405 - INFO - Sent end of frame 19, packet 68/68
+2025-06-16 18:07:19,448 - INFO - Frame 20: Sending 70 packets, total size 96236 bytes
+2025-06-16 18:07:19,449 - INFO - Sent start of frame 20, total packets: 70
+2025-06-16 18:07:19,531 - INFO - Sent end of frame 20, packet 69/69
+2025-06-16 18:07:19,575 - INFO - Frame 21: Sending 69 packets, total size 94570 bytes
+2025-06-16 18:07:19,575 - INFO - Sent start of frame 21, total packets: 69
+2025-06-16 18:07:19,657 - INFO - Sent end of frame 21, packet 68/68
+2025-06-16 18:07:19,700 - INFO - Frame 22: Sending 69 packets, total size 94916 bytes
+2025-06-16 18:07:19,700 - INFO - Sent start of frame 22, total packets: 69
+2025-06-16 18:07:19,815 - INFO - Sent end of frame 22, packet 68/68
+2025-06-16 18:07:19,859 - INFO - Frame 23: Sending 69 packets, total size 94809 bytes
+2025-06-16 18:07:19,859 - INFO - Sent start of frame 23, total packets: 69
+2025-06-16 18:07:19,940 - INFO - Sent end of frame 23, packet 68/68
+2025-06-16 18:07:19,985 - INFO - Frame 24: Sending 70 packets, total size 96397 bytes
+2025-06-16 18:07:19,985 - INFO - Sent start of frame 24, total packets: 70
+2025-06-16 18:07:20,068 - INFO - Sent end of frame 24, packet 69/69
+2025-06-16 18:07:20,113 - INFO - Frame 25: Sending 69 packets, total size 94760 bytes
+2025-06-16 18:07:20,113 - INFO - Sent start of frame 25, total packets: 69
+2025-06-16 18:07:20,290 - INFO - Sent end of frame 25, packet 68/68
+2025-06-16 18:07:20,387 - INFO - Frame 26: Sending 69 packets, total size 95027 bytes
+2025-06-16 18:07:20,387 - INFO - Sent start of frame 26, total packets: 69
+2025-06-16 18:07:20,479 - INFO - Sent end of frame 26, packet 68/68
+2025-06-16 18:07:20,523 - INFO - Frame 27: Sending 69 packets, total size 94748 bytes
+2025-06-16 18:07:20,523 - INFO - Sent start of frame 27, total packets: 69
+2025-06-16 18:07:20,603 - INFO - Sent end of frame 27, packet 68/68
+2025-06-16 18:07:20,643 - INFO - Frame 28: Sending 70 packets, total size 96578 bytes
+2025-06-16 18:07:20,643 - INFO - Sent start of frame 28, total packets: 70
+2025-06-16 18:07:20,724 - INFO - Sent end of frame 28, packet 69/69
+2025-06-16 18:07:20,768 - INFO - Frame 29: Sending 69 packets, total size 94906 bytes
+2025-06-16 18:07:20,768 - INFO - Sent start of frame 29, total packets: 69
+2025-06-16 18:07:20,849 - INFO - Sent end of frame 29, packet 68/68
+2025-06-16 18:07:20,893 - INFO - Frame 30: Sending 69 packets, total size 95342 bytes
+2025-06-16 18:07:20,893 - INFO - Sent start of frame 30, total packets: 69
+2025-06-16 18:07:20,974 - INFO - Sent end of frame 30, packet 68/68
+2025-06-16 18:07:21,013 - INFO - Frame 31: Sending 69 packets, total size 95146 bytes
+2025-06-16 18:07:21,013 - INFO - Sent start of frame 31, total packets: 69
+2025-06-16 18:07:21,095 - INFO - Sent end of frame 31, packet 68/68
+2025-06-16 18:07:21,138 - INFO - Frame 32: Sending 70 packets, total size 96764 bytes
+2025-06-16 18:07:21,138 - INFO - Sent start of frame 32, total packets: 70
+2025-06-16 18:07:21,221 - INFO - Sent end of frame 32, packet 69/69
+2025-06-16 18:07:21,265 - INFO - Frame 33: Sending 69 packets, total size 94993 bytes
+2025-06-16 18:07:21,266 - INFO - Sent start of frame 33, total packets: 69
+2025-06-16 18:07:21,346 - INFO - Sent end of frame 33, packet 68/68
+2025-06-16 18:07:21,390 - INFO - Frame 34: Sending 69 packets, total size 95424 bytes
+2025-06-16 18:07:21,390 - INFO - Sent start of frame 34, total packets: 69
+2025-06-16 18:07:21,470 - INFO - Sent end of frame 34, packet 68/68
+2025-06-16 18:07:21,511 - INFO - Frame 35: Sending 69 packets, total size 95279 bytes
+2025-06-16 18:07:21,511 - INFO - Sent start of frame 35, total packets: 69
+2025-06-16 18:07:21,591 - INFO - Sent end of frame 35, packet 68/68
+2025-06-16 18:07:21,634 - INFO - Frame 36: Sending 70 packets, total size 96940 bytes
+2025-06-16 18:07:21,635 - INFO - Sent start of frame 36, total packets: 70
+2025-06-16 18:07:21,719 - INFO - Sent end of frame 36, packet 69/69
+2025-06-16 18:07:21,762 - INFO - Frame 37: Sending 69 packets, total size 95030 bytes
+2025-06-16 18:07:21,763 - INFO - Sent start of frame 37, total packets: 69
+2025-06-16 18:07:21,848 - INFO - Sent end of frame 37, packet 68/68
+2025-06-16 18:07:21,893 - INFO - Frame 38: Sending 69 packets, total size 95522 bytes
+2025-06-16 18:07:21,894 - INFO - Sent start of frame 38, total packets: 69
+2025-06-16 18:07:21,973 - INFO - Sent end of frame 38, packet 68/68
+2025-06-16 18:07:22,018 - INFO - Frame 39: Sending 69 packets, total size 95203 bytes
+2025-06-16 18:07:22,018 - INFO - Sent start of frame 39, total packets: 69
+2025-06-16 18:07:22,096 - INFO - Sent end of frame 39, packet 68/68
+2025-06-16 18:07:22,137 - INFO - Frame 40: Sending 70 packets, total size 97059 bytes
+2025-06-16 18:07:22,137 - INFO - Sent start of frame 40, total packets: 70
+2025-06-16 18:07:22,217 - INFO - Sent end of frame 40, packet 69/69
+2025-06-16 18:07:22,260 - INFO - Frame 41: Sending 69 packets, total size 95215 bytes
+2025-06-16 18:07:22,261 - INFO - Sent start of frame 41, total packets: 69
+2025-06-16 18:07:22,426 - INFO - Sent end of frame 41, packet 68/68
+2025-06-16 18:07:22,468 - INFO - Frame 42: Sending 69 packets, total size 95722 bytes
+2025-06-16 18:07:22,469 - INFO - Sent start of frame 42, total packets: 69
+2025-06-16 18:07:22,553 - INFO - Sent end of frame 42, packet 68/68
+2025-06-16 18:07:22,597 - INFO - Frame 43: Sending 69 packets, total size 95676 bytes
+2025-06-16 18:07:22,598 - INFO - Sent start of frame 43, total packets: 69
+2025-06-16 18:07:22,681 - INFO - Sent end of frame 43, packet 68/68
+2025-06-16 18:07:22,725 - INFO - Frame 44: Sending 71 packets, total size 97417 bytes
+2025-06-16 18:07:22,726 - INFO - Sent start of frame 44, total packets: 71
+2025-06-16 18:07:22,812 - INFO - Sent end of frame 44, packet 70/70
+2025-06-16 18:07:22,853 - INFO - Frame 45: Sending 69 packets, total size 95542 bytes
+2025-06-16 18:07:22,853 - INFO - Sent start of frame 45, total packets: 69
+2025-06-16 18:07:22,936 - INFO - Sent end of frame 45, packet 68/68
+2025-06-16 18:07:22,979 - INFO - Frame 46: Sending 70 packets, total size 95822 bytes
+2025-06-16 18:07:22,979 - INFO - Sent start of frame 46, total packets: 70
+2025-06-16 18:07:23,064 - INFO - Sent end of frame 46, packet 69/69
+2025-06-16 18:07:23,104 - INFO - Frame 47: Sending 69 packets, total size 95623 bytes
+2025-06-16 18:07:23,105 - INFO - Sent start of frame 47, total packets: 69
+2025-06-16 18:07:23,186 - INFO - Sent end of frame 47, packet 68/68
+2025-06-16 18:07:23,228 - INFO - Frame 48: Sending 71 packets, total size 97300 bytes
+2025-06-16 18:07:23,229 - INFO - Sent start of frame 48, total packets: 71
+2025-06-16 18:07:23,311 - INFO - Sent end of frame 48, packet 70/70
+2025-06-16 18:07:23,354 - INFO - Frame 49: Sending 69 packets, total size 95648 bytes
+2025-06-16 18:07:23,355 - INFO - Sent start of frame 49, total packets: 69
+2025-06-16 18:07:23,436 - INFO - Sent end of frame 49, packet 68/68
+2025-06-16 18:07:23,479 - INFO - Frame 50: Sending 70 packets, total size 95809 bytes
+2025-06-16 18:07:23,480 - INFO - Sent start of frame 50, total packets: 70
+2025-06-16 18:07:23,565 - INFO - Sent end of frame 50, packet 69/69
+2025-06-16 18:07:23,607 - INFO - Frame 51: Sending 70 packets, total size 95900 bytes
+2025-06-16 18:07:23,607 - INFO - Sent start of frame 51, total packets: 70
+2025-06-16 18:07:23,690 - INFO - Sent end of frame 51, packet 69/69
+2025-06-16 18:07:23,735 - INFO - Frame 52: Sending 71 packets, total size 97922 bytes
+2025-06-16 18:07:23,735 - INFO - Sent start of frame 52, total packets: 71
+2025-06-16 18:07:23,820 - INFO - Sent end of frame 52, packet 70/70
+2025-06-16 18:07:23,864 - INFO - Frame 53: Sending 70 packets, total size 95942 bytes
+2025-06-16 18:07:23,864 - INFO - Sent start of frame 53, total packets: 70
+2025-06-16 18:07:23,958 - INFO - 
+Stopping video sender...
+2025-06-16 18:07:23,972 - INFO - Sender stopped
