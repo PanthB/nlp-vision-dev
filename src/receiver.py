@@ -77,22 +77,22 @@ class VideoReceiver(QMainWindow):
         self.setCentralWidget(central_widget)
         layout = QVBoxLayout(central_widget)
 
-        # Video display label - give it much more space
+        # Video display label
         self.video_label = QLabel()
         self.video_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.video_label.setMinimumHeight(400)  # Set minimum height for video
-        layout.addWidget(self.video_label, 1)  # Give it stretch factor of 1
+        self.video_label.setMinimumHeight(400)
+        layout.addWidget(self.video_label, 1)  
 
-        # Text input and submit button - keep compact
+        # Text input and submit button
         self.text_input = QLineEdit()
         self.text_input.setPlaceholderText("Filter the video color...")
-        layout.addWidget(self.text_input, 0)  # No stretch - keep compact
+        layout.addWidget(self.text_input, 0)
 
         submit_button = QPushButton("Submit")
         submit_button.clicked.connect(self.handle_submit)
-        layout.addWidget(submit_button, 0)  # No stretch - keep compact
+        layout.addWidget(submit_button, 0)
 
-        # User input display label - keep compact
+        # User input display labelt
         self.user_input_label = QLabel("")
         self.user_input_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.user_input_label.setStyleSheet("""
@@ -107,11 +107,11 @@ class VideoReceiver(QMainWindow):
             }
         """)
         self.user_input_label.setWordWrap(True)
-        layout.addWidget(self.user_input_label, 0)  # No stretch - keep compact
+        layout.addWidget(self.user_input_label, 0)
 
         # Status label - keep compact
         self.status_label = QLabel("Waiting for video stream...")
-        layout.addWidget(self.status_label, 0)  # No stretch - keep compact
+        layout.addWidget(self.status_label, 0)
 
     def _setup_udp_socket(self) -> None:
         """Initialize and configure the UDP socket."""
@@ -150,13 +150,13 @@ class VideoReceiver(QMainWindow):
 
                 # Log packet statistics every second
                 current_time = time.time()
-                # Remove in production
-                if current_time - self.last_log_time >= 1.0:
-                    logger.info(
-                        f"Received {self.packets_received} packets in the last second"
-                    )
-                    self.packets_received = 0
-                    self.last_log_time = current_time
+                # # Remove in production
+                # if current_time - self.last_log_time >= 1.0:
+                #     logger.info(
+                #         f"Received {self.packets_received} packets in the last second"
+                #     )
+                #     self.packets_received = 0
+                #     self.last_log_time = current_time
 
                 if len(data) < HEADER_SIZE:
                     logger.warning(f"Received packet too small: {len(data)} bytes")
@@ -180,7 +180,6 @@ class VideoReceiver(QMainWindow):
             # Store total packets for this frame
             self.frame_total_packets[frame_number] = total_packets
 
-            # Log first and last packet of each frame
             if packet_num == 0:
                 logger.info(
                     f"Received start of frame {frame_number}, "
@@ -192,10 +191,8 @@ class VideoReceiver(QMainWindow):
                     f"packet {packet_num}/{total_packets-1}"
                 )
 
-            # Store packet in frame buffer
             self.frame_buffers[frame_number][packet_num] = packet_data
 
-            # Try to process complete frames
             self.process_complete_frames()
 
         except struct.error as e:
@@ -289,7 +286,6 @@ class VideoReceiver(QMainWindow):
     def _decode_jpeg_frame(self, jpeg_data: bytes) -> np.ndarray:
         """Decode JPEG data into a numpy array."""
         nparr = np.frombuffer(jpeg_data, np.uint8)
-        logger.info(f"Converted to numpy array of size: {nparr.size}")
         return cv2.imdecode(nparr, cv2.COLOR_BGR2GRAY)
 
     def _display_frame(self, frame: np.ndarray) -> None:
@@ -319,15 +315,11 @@ class VideoReceiver(QMainWindow):
             Qt.AspectRatioMode.KeepAspectRatio,
             Qt.TransformationMode.SmoothTransformation
         )
-        logger.info(
-            f"Scaled image to {scaled_pixmap.width()}x{scaled_pixmap.height()}"
-        )
 
         self.video_label.setPixmap(scaled_pixmap)
         self.status_label.setText(
             f"Receiving video stream... Frame size: {width}x{height}"
         )
-        logger.info("Successfully displayed frame")
 
     def _handle_decode_error(self, jpeg_data: bytes) -> None:
         """Handle JPEG decode errors."""

@@ -95,8 +95,8 @@ def send_video(video_path):
                 time.sleep(0.001)  # Small delay between packets
 
             frame_number += 1
-            # Simulate 30 FPS
-            time.sleep(1/30)
+            # Simulate 60 FPS
+            time.sleep(1/60)
 
     except KeyboardInterrupt:
         logger.info("\nStopping video sender...")
