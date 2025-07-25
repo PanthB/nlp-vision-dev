@@ -10,7 +10,11 @@ import time
 import traceback
 from collections import defaultdict
 from typing import Dict, Any
-from nlp_test import process_user_input
+
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from nlp import process_user_input, process_user_input_knn
 
 from PyQt6.QtWidgets import (
     QApplication,
@@ -21,11 +25,10 @@ from PyQt6.QtWidgets import (
     QPushButton,
     QLabel,
 )
-from PyQt6.QtCore import Qt, QTimer
+from PyQt6.QtCore import Qt, QTimer, QObject, QThread, pyqtSignal
 from PyQt6.QtGui import QImage, QPixmap
 
 
-# Constants
 WINDOW_TITLE = "Video Stream Receiver"
 WINDOW_WIDTH = 800
 WINDOW_HEIGHT = 600
@@ -294,7 +297,6 @@ class VideoReceiver(QMainWindow):
         height, width, channel = frame.shape
         logger.info(f"Successfully decoded JPEG to image of size {width}x{height}")
 
-        # Convert frame to QImage
         bytes_per_line = 3 * width
         q_img = QImage(
             frame.data,
@@ -303,7 +305,7 @@ class VideoReceiver(QMainWindow):
             bytes_per_line,
             QImage.Format.Format_RGB888
         )
-        q_img = q_img.rgbSwapped()  # Convert BGR to RGB
+        q_img = q_img.rgbSwapped()
         logger.info("Converted to QImage")
 
         # Scale and display image
@@ -335,20 +337,34 @@ class VideoReceiver(QMainWindow):
         logger.error(f"First 20 bytes: {jpeg_data[:20]}")
 
     def handle_submit(self) -> None:
-        """Handle text input submission."""
         text = self.text_input.text()
         if text:
-            print(f"User submitted: {text}")
             self.text_input.clear()
-            
-            # Update the user input display label
-            self.user_input_label.setText(f"Received user input: {text}")
-            
-            # Also update status label as backup
+            self.user_input_label.setText("Processing...")
             self.status_label.setText(f"Last submission: {text}")
+
+            self.thread = QThread()
+            self.worker = NLPWorker(text)
+            self.worker.moveToThread(self.thread)
+            self.thread.started.connect(self.worker.run)
+            self.worker.finished.connect(self.on_nlp_finished)
+            self.worker.error.connect(self.on_nlp_error)
+            self.worker.finished.connect(self.thread.quit)
+            self.worker.finished.connect(self.worker.deleteLater)
+            self.thread.finished.connect(self.thread.deleteLater)
+            self.worker.error.connect(self.thread.quit)
+            self.worker.error.connect(self.worker.deleteLater)
+
+            self.thread.start()
         else:
-            # Clear the display if no text
             self.user_input_label.setText("")
+
+    def on_nlp_finished(self, output):
+        self.user_input_label.setText(f"we are applying this command: {output}")
+
+    def on_nlp_error(self, error):
+        self.user_input_label.setText(f"Error processing input: {error}")
+        self.status_label.setText("NLP error")
 
     def closeEvent(self, event: Any) -> None:
         """Clean up when window is closed."""
@@ -356,6 +372,24 @@ class VideoReceiver(QMainWindow):
         self.timer.stop()
         self.sock.close()
         event.accept()
+
+
+class NLPWorker(QObject):
+    finished = pyqtSignal(str)
+    error = pyqtSignal(str)
+
+    def __init__(self, text, k=3):
+        super().__init__()
+        self.text = text
+        self.k = k
+
+    def run(self):
+        try:
+            from nlp import process_user_input_knn
+            result = process_user_input_knn(self.text, self.k)
+            self.finished.emit(result)
+        except Exception as e:
+            self.error.emit(str(e))
 
 
 def main() -> None:
