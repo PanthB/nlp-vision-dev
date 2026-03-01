@@ -26,3 +26,6 @@ build/
 *.mp4
 *.avi
 *.mov 
+
+#Ignore cursor AI rules
+.cursor/rules/codacy.mdc
