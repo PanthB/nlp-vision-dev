@@ -42,13 +42,18 @@ MIN_JPEG_SIZE     = 100
 JPEG_HEADER       = b'\xff\xd8'
 FRAME_BUFFER_SIZE = 5
 
+# ── Video TCP (FPGA stream_server → PC) ─────────────────────────────
+# stream_server.c listens on this port, sends a 4-byte header (uint16 width,
+# uint16 height, big-endian), then raw RGB565 frames back-to-back.
+VIDEO_TCP_PORT = 5013
+
 # ── Command transport (PC → PYNQ) ────────────────────────────────────
 # Set COMMAND_TRANSPORT to "ethernet" or "usb" depending on how you
 # physically connect the host PC to the PYNQ board.
 COMMAND_TRANSPORT = "ethernet"  # "ethernet" | "usb"
 
 # Ethernet / TCP  — PYNQ must run a TCP server on this host:port.
-PYNQ_TCP_HOST = "192.168.2.99"   # Change to your PYNQ board's IP address
+PYNQ_TCP_HOST = "192.168.2.99"
 PYNQ_TCP_PORT = 8888
 
 # USB-C / Serial  — PYNQ appears as a CDC serial device on the host.
@@ -253,6 +258,7 @@ class VideoReceiver(QMainWindow):
         self._setup_udp_socket()
         self._setup_frame_buffers()
         self._setup_timer()
+        self._setup_tcp_video()
 
     # ── Window ───────────────────────────────────────────────────────
 
@@ -723,12 +729,113 @@ class VideoReceiver(QMainWindow):
             " font-family: 'SF Mono','Fira Code',monospace; background: transparent;"
         )
 
+    # ── TCP video ────────────────────────────────────────────────────
+
+    def _setup_tcp_video(self) -> None:
+        self._video_thread = QThread()
+        self._video_worker = TcpVideoWorker()
+        self._video_worker.moveToThread(self._video_thread)
+        self._video_thread.started.connect(self._video_worker.run)
+        self._video_worker.frame_ready.connect(self._on_tcp_frame)
+        self._video_worker.error.connect(self._on_tcp_error)
+        self._video_thread.start()
+
+    def _on_tcp_frame(self, frame: object) -> None:
+        self._display_frame(frame)  # type: ignore[arg-type]
+
+    def _on_tcp_error(self, msg: str) -> None:
+        self.status_label.setText(f"⚠  TCP: {msg}")
+        self.status_label.setStyleSheet(
+            "color: #F85149; font-size: 11px;"
+            " font-family: 'SF Mono','Fira Code',monospace; background: transparent;"
+        )
+
     # ── Lifecycle ────────────────────────────────────────────────────
 
     def closeEvent(self, event: Any) -> None:
         self.timer.stop()
         self.sock.close()
+        if hasattr(self, "_video_thread"):
+            self._video_thread.quit()
         event.accept()
+
+
+# ─────────────────────────────────────────────────────────────────────
+#  TCP Video Worker  —  reads raw RGB565 frames from stream_server.c
+# ─────────────────────────────────────────────────────────────────────
+
+class TcpVideoWorker(QObject):
+    """
+    Connects to stream_server running on the PYNQ board (TCP, port VIDEO_TCP_PORT).
+
+    Protocol from stream_server.c:
+      1. 4-byte header:  uint16 width + uint16 height  (big-endian)
+      2. Continuous raw RGB565 frames, each width*height*2 bytes
+
+    Each frame is converted to a BGR numpy array so that the existing
+    _display_frame() path (which calls QImage.rgbSwapped()) produces
+    correct RGB output on screen.
+
+    If the colour channels look wrong at runtime, toggle '<u2' ↔ '>u2'
+    to flip the per-pixel byte order of the RGB565 words.
+    """
+
+    frame_ready = pyqtSignal(object)
+    error       = pyqtSignal(str)
+
+    def run(self) -> None:
+        try:
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            s.settimeout(5.0)
+            s.connect((PYNQ_TCP_HOST, VIDEO_TCP_PORT))
+            s.settimeout(None)
+
+            hdr = TcpVideoWorker._recv_exact(s, 4)
+            if hdr is None:
+                self.error.emit("TCP video: header not received")
+                s.close()
+                return
+
+            width  = struct.unpack(">H", hdr[0:2])[0]
+            height = struct.unpack(">H", hdr[2:4])[0]
+            frame_bytes = width * height * 2  # RGB565
+
+            while True:
+                raw = TcpVideoWorker._recv_exact(s, frame_bytes)
+                if raw is None:
+                    self.error.emit("TCP video: stream ended")
+                    break
+
+                # Interpret as little-endian uint16 (ARM native byte order).
+                pixels = np.frombuffer(raw, dtype="<u2").reshape(height, width)
+
+                r = ((pixels >> 11) & 0x1F) * 255 // 31
+                g = ((pixels >> 5)  & 0x3F) * 255 // 63
+                b = (pixels         & 0x1F) * 255 // 31
+
+                # Stack as BGR so _display_frame's rgbSwapped() corrects to RGB.
+                frame = np.ascontiguousarray(
+                    np.stack(
+                        [b.astype(np.uint8), g.astype(np.uint8), r.astype(np.uint8)],
+                        axis=2,
+                    )
+                )
+                self.frame_ready.emit(frame)
+
+            s.close()
+
+        except Exception as e:
+            self.error.emit(str(e))
+
+    @staticmethod
+    def _recv_exact(s: socket.socket, n: int):
+        buf = bytearray()
+        while len(buf) < n:
+            chunk = s.recv(n - len(buf))
+            if not chunk:
+                return None
+            buf.extend(chunk)
+        return bytes(buf)
 
 
 # ─────────────────────────────────────────────────────────────────────
@@ -778,7 +885,7 @@ class CommandSendWorker(QObject):
     def run(self) -> None:
         try:
             if COMMAND_TRANSPORT == "ethernet":
-                self._send_tcp()
+                self._send_udp()
             elif COMMAND_TRANSPORT == "usb":
                 self._send_serial()
             else:
@@ -787,12 +894,10 @@ class CommandSendWorker(QObject):
         except Exception as e:
             self.error.emit(str(e))
 
-    def _send_tcp(self) -> None:
-        """Open a TCP connection to the PYNQ and write the command, newline-terminated."""
-        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-            s.settimeout(3.0)
-            s.connect((PYNQ_TCP_HOST, PYNQ_TCP_PORT))
-            s.sendall((self.text + "\n").encode("utf-8"))
+    def _send_udp(self) -> None:
+        """Send the command as a single UDP datagram to the PYNQ board."""
+        with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
+            s.sendto((self.text + "\n").encode("utf-8"), (PYNQ_TCP_HOST, PYNQ_TCP_PORT))
 
     def _send_serial(self) -> None:
         """Open the CDC serial port to the PYNQ and write the command, newline-terminated."""
