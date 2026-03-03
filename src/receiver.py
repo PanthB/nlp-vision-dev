@@ -2,6 +2,12 @@
 
 import sys
 import os
+import re
+
+# Must be set before numpy / torch / ctranslate2 load their OpenMP runtimes.
+# Without this, macOS aborts when both torch and faster-whisper bundle libiomp5.dylib.
+os.environ.setdefault("KMP_DUPLICATE_LIB_OK", "TRUE")
+
 import socket
 import cv2
 import numpy as np
@@ -21,8 +27,78 @@ from PyQt6.QtWidgets import (
     QFrame,
     QSizePolicy,
 )
-from PyQt6.QtCore import Qt, QTimer, QObject, QThread, pyqtSignal
-from PyQt6.QtGui import QImage, QPixmap
+from PyQt6.QtCore import Qt, QTimer, QObject, QThread, pyqtSignal, QSize, QRectF, QPointF
+from PyQt6.QtGui import QImage, QPixmap, QIcon, QPainter, QPen, QBrush, QColor
+
+from speech_engine import SpeechEngine
+
+
+def _mic_pixmap(color_hex: str, size: int = 18) -> QPixmap:
+    """Return a vector-drawn microphone QPixmap at the requested size."""
+    s = float(size)
+    px = QPixmap(size, size)
+    px.fill(Qt.GlobalColor.transparent)
+
+    p = QPainter(px)
+    p.setRenderHint(QPainter.RenderHint.Antialiasing)
+
+    col   = QColor(color_hex)
+    stroke = max(1.5, s * 0.095)
+
+    # ── Capsule body (filled) ─────────────────────────────────────────
+    p.setPen(Qt.PenStyle.NoPen)
+    p.setBrush(QBrush(col))
+    bw = s * 0.40
+    bh = s * 0.56
+    bx = (s - bw) / 2.0
+    by = s * 0.03
+    p.drawRoundedRect(QRectF(bx, by, bw, bh), bw / 2.0, bw / 2.0)
+
+    # ── U-bracket stand (stroked arc) ─────────────────────────────────
+    pen = QPen(col, stroke)
+    pen.setCapStyle(Qt.PenCapStyle.RoundCap)
+    pen.setJoinStyle(Qt.PenJoinStyle.RoundJoin)
+    p.setPen(pen)
+    p.setBrush(Qt.BrushStyle.NoBrush)
+
+    arc_x = s * 0.11
+    arc_y = s * 0.34
+    arc_w = s * 0.78
+    arc_h = s * 0.44
+    # Bottom semicircle: start 0° (3 o'clock), sweep -180° clockwise → 9 o'clock
+    p.drawArc(QRectF(arc_x, arc_y, arc_w, arc_h), 0 * 16, -180 * 16)
+
+    # ── Vertical pole ─────────────────────────────────────────────────
+    cx       = s / 2.0
+    pole_top = arc_y + arc_h
+    pole_bot = s * 0.90
+    p.drawLine(QPointF(cx, pole_top), QPointF(cx, pole_bot))
+
+    # ── Horizontal base ───────────────────────────────────────────────
+    p.drawLine(QPointF(s * 0.25, pole_bot), QPointF(s * 0.75, pole_bot))
+
+    p.end()
+    return px
+
+
+def _mic_icon(color_hex: str, size: int = 18) -> QIcon:
+    return QIcon(_mic_pixmap(color_hex, size))
+
+
+# ── Speech-to-text behaviour ─────────────────────────────────────────
+# AUTO_SEND  True  -> submit every transcription automatically
+#            False -> populate the input field; user sends manually
+AUTO_SEND = False
+
+# ENABLE_JARVIS  True  -> when AUTO_SEND is False, still auto-submit if the
+#                         phrase begins with "Jarvis" or "Hey Jarvis";
+#                         the wake-word prefix is stripped before sending
+#                False -> no wake-word detection; behaves as plain AUTO_SEND=False
+ENABLE_JARVIS = True
+
+# Matches "jarvis" or "hey jarvis" (with optional filler punctuation) at the
+# very start of a transcription, case-insensitive.
+_JARVIS_PREFIX = re.compile(r"^(?:hey\s+)?jarvis[,.\s]*", re.IGNORECASE)
 
 # ── Window ───────────────────────────────────────────────────────────
 WINDOW_TITLE  = "NLP-VisionRT"
@@ -179,9 +255,9 @@ QWidget#responseArea {
     background: transparent;
 }
 QLabel#commandResponseLabel {
-    font-size: 13px;
+    font-size: 16px;
     background: transparent;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 QWidget#inputRow {
     background: transparent;
@@ -240,6 +316,46 @@ QFrame#hDivider {
     max-height: 1px;
     min-height: 1px;
 }
+
+/* ─── Microphone toggle button ──────────────────────────────────── */
+QPushButton#micButton {
+    background-color: #21262D;
+    color: #8B949E;
+    border: 1px solid #30363D;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 0px;
+    min-width: 38px;
+    max-width: 38px;
+    min-height: 36px;
+    max-height: 36px;
+}
+QPushButton#micButton:hover {
+    background-color: #30363D;
+    color: #E6EDF3;
+    border-color: #484F58;
+}
+QPushButton#micButton:disabled {
+    background-color: #161B22;
+    color: #30363D;
+    border-color: #21262D;
+}
+
+/* ─── Voice-send toggle ─────────────────────────────────────────── */
+QPushButton#voiceSendButton {
+    background-color: transparent;
+    color: #484F58;
+    border: 1px solid #30363D;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 1px 8px;
+}
+QPushButton#voiceSendButton:hover {
+    color: #8B949E;
+    border-color: #484F58;
+}
 """
 
 
@@ -259,6 +375,7 @@ class VideoReceiver(QMainWindow):
         self._setup_frame_buffers()
         self._setup_timer()
         self._setup_tcp_video()
+        self._setup_speech()
 
     # ── Window ───────────────────────────────────────────────────────
 
@@ -408,18 +525,26 @@ class VideoReceiver(QMainWindow):
         ph_layout.addWidget(title)
         ph_layout.addStretch(1)
 
+        self.voice_send_btn = QPushButton("VOICE SEND: OFF")
+        self.voice_send_btn.setObjectName("voiceSendButton")
+        self.voice_send_btn.setToolTip(
+            'When ON, saying "send", "enter", "go", or "submit" auto-sends the command'
+        )
+        self.voice_send_btn.clicked.connect(self._toggle_voice_send)
+        ph_layout.addWidget(self.voice_send_btn)
+
         layout.addWidget(ph)
 
         resp_area = QWidget()
         resp_area.setObjectName("responseArea")
         resp_layout = QVBoxLayout(resp_area)
-        resp_layout.setContentsMargins(14, 10, 14, 10)
+        resp_layout.setContentsMargins(18, 16, 18, 16)
 
         self.user_input_label = QLabel("No command issued yet.")
         self.user_input_label.setObjectName("commandResponseLabel")
         self.user_input_label.setWordWrap(True)
         self.user_input_label.setStyleSheet(
-            "color: #484F58; font-size: 13px; background: transparent;"
+            "color: #484F58; font-size: 16px; background: transparent;"
         )
         resp_layout.addWidget(self.user_input_label)
 
@@ -440,10 +565,19 @@ class VideoReceiver(QMainWindow):
         self.text_input = QLineEdit()
         self.text_input.setObjectName("commandInput")
         self.text_input.setPlaceholderText(
-            'e.g. "apply gaussian blur"  or  "convert to grayscale"'
+            'e.g. "track red"  or  "zoom in"'
         )
         self.text_input.returnPressed.connect(self.handle_submit)
         ir_layout.addWidget(self.text_input, 1)
+
+        self.mic_button = QPushButton()
+        self.mic_button.setObjectName("micButton")
+        self.mic_button.setIcon(_mic_icon("#30363D", 18))
+        self.mic_button.setIconSize(QSize(18, 18))
+        self.mic_button.setToolTip("Speech model loading…")
+        self.mic_button.setEnabled(False)
+        self.mic_button.clicked.connect(self._toggle_mic)
+        ir_layout.addWidget(self.mic_button)
 
         self.submit_button = QPushButton("Send")
         self.submit_button.setObjectName("submitButton")
@@ -678,14 +812,14 @@ class VideoReceiver(QMainWindow):
         text = self.text_input.text().strip()
         if not text:
             self.user_input_label.setStyleSheet(
-                "color: #484F58; font-size: 13px; background: transparent;"
+                "color: #484F58; font-size: 16px; background: transparent;"
             )
             self.user_input_label.setText("No command issued yet.")
             return
 
         self.text_input.clear()
         self.user_input_label.setStyleSheet(
-            "color: #8B949E; font-size: 13px; background: transparent;"
+            "color: #8B949E; font-size: 16px; background: transparent;"
         )
         self.user_input_label.setText(f'Sent: "{text}"')
 
@@ -729,6 +863,112 @@ class VideoReceiver(QMainWindow):
             " font-family: 'SF Mono','Fira Code',monospace; background: transparent;"
         )
 
+    # ── Speech-to-text ────────────────────────────────────────────────
+
+    def _setup_speech(self) -> None:
+        self._speech_engine = SpeechEngine(parent=self)
+        self._speech_engine.transcript_partial.connect(self._on_transcript_partial)
+        self._speech_engine.transcript_final.connect(self._on_transcript_final)
+        self._speech_engine.voice_send_triggered.connect(self._on_voice_send_triggered)
+        self._speech_engine.listening_started.connect(self._on_listening_started)
+        self._speech_engine.listening_stopped.connect(self._on_listening_stopped)
+        self._speech_engine.model_status.connect(self._on_speech_model_status)
+        self._speech_engine.error.connect(self._on_speech_error)
+
+    def _toggle_mic(self) -> None:
+        self._speech_engine.toggle_listening()
+
+    def _toggle_voice_send(self) -> None:
+        enabled = not self._speech_engine.voice_send_enabled
+        self._speech_engine.voice_send_enabled = enabled
+        if enabled:
+            self.voice_send_btn.setText("VOICE SEND: ON")
+            self.voice_send_btn.setStyleSheet("""
+                QPushButton {
+                    background-color: rgba(56, 139, 253, 0.12);
+                    border: 1px solid rgba(56, 139, 253, 0.40);
+                    border-radius: 4px;
+                    color: #388BFD;
+                    font-size: 10px;
+                    font-weight: 600;
+                    letter-spacing: 0.5px;
+                    padding: 1px 8px;
+                }
+            """)
+        else:
+            self.voice_send_btn.setText("VOICE SEND: OFF")
+            self.voice_send_btn.setStyleSheet("")
+
+    def _on_listening_started(self) -> None:
+        self.mic_button.setIcon(_mic_icon("#F85149", 18))
+        self.mic_button.setStyleSheet("""
+            QPushButton {
+                background-color: rgba(248, 81, 73, 0.15);
+                border: 1.5px solid #F85149;
+                border-radius: 8px;
+                padding: 0px;
+                min-width: 38px;
+                max-width: 38px;
+                min-height: 36px;
+                max-height: 36px;
+            }
+        """)
+        self.user_input_label.setStyleSheet(
+            "color: #388BFD; font-size: 16px; background: transparent;"
+        )
+        self.user_input_label.setText("Listening…")
+
+    def _on_listening_stopped(self) -> None:
+        self.mic_button.setIcon(_mic_icon("#8B949E", 18))
+        self.mic_button.setStyleSheet("")
+        status_text = self.user_input_label.text()
+        if status_text in ("Listening…", "Detecting speech…"):
+            self.user_input_label.setStyleSheet(
+                "color: #484F58; font-size: 16px; background: transparent;"
+            )
+            self.user_input_label.setText("No command issued yet.")
+
+    def _on_transcript_partial(self, text: str) -> None:
+        self.user_input_label.setStyleSheet(
+            "color: #8B949E; font-size: 16px; background: transparent;"
+        )
+        self.user_input_label.setText(text)
+
+    def _on_transcript_final(self, text: str) -> None:
+        if AUTO_SEND:
+            self.text_input.setText(text)
+            self.handle_submit()
+            return
+
+        if ENABLE_JARVIS:
+            match = _JARVIS_PREFIX.match(text)
+            if match:
+                command = text[match.end():].strip()
+                self.text_input.setText(command)
+                self.handle_submit()
+                return
+
+        self.text_input.setText(text)
+
+    def _on_voice_send_triggered(self) -> None:
+        self.handle_submit()
+
+    def _on_speech_model_status(self, msg: str) -> None:
+        self.user_input_label.setStyleSheet(
+            "color: #8B949E; font-size: 16px; background: transparent;"
+        )
+        self.user_input_label.setText(msg)
+        if "ready" in msg.lower():
+            self.mic_button.setEnabled(True)
+            self.mic_button.setIcon(_mic_icon("#8B949E", 18))
+            self.mic_button.setToolTip("Click to start voice input")
+
+    def _on_speech_error(self, msg: str) -> None:
+        self.user_input_label.setStyleSheet(
+            "color: #F85149; font-size: 16px; background: transparent;"
+        )
+        self.user_input_label.setText(f"Speech error: {msg}")
+
     # ── TCP video ────────────────────────────────────────────────────
 
     def _setup_tcp_video(self) -> None:
@@ -757,6 +997,8 @@ class VideoReceiver(QMainWindow):
         self.sock.close()
         if hasattr(self, "_video_thread"):
             self._video_thread.quit()
+        if hasattr(self, "_speech_engine"):
+            self._speech_engine.shutdown()
         event.accept()
 
 
