@@ -29,7 +29,7 @@ WINDOW_TITLE  = "NLP-VisionRT"
 WINDOW_WIDTH  = 980
 WINDOW_HEIGHT = 740
 WINDOW_X_POS  = 100
-WINDOW_Y_POS  = 100
+WINDOW_Y_POS  = 150
 
 # ── Video UDP (FPGA → PC) ────────────────────────────────────────────
 UDP_IP            = "127.0.0.1"
@@ -79,8 +79,8 @@ QWidget {
 QWidget#header {
     background-color: #161B22;
     border-bottom: 1px solid #21262D;
-    min-height: 54px;
-    max-height: 54px;
+    min-height: 64px;
+    max-height: 64px;
 }
 QLabel#logoLabel {
     color: #E6EDF3;
@@ -297,31 +297,31 @@ class VideoReceiver(QMainWindow):
         header.setObjectName("header")
 
         layout = QHBoxLayout(header)
-        layout.setContentsMargins(20, 0, 20, 0)
+        layout.setContentsMargins(24, 12, 24, 12)
         layout.setSpacing(0)
 
-        brand_row = QHBoxLayout()
-        brand_row.setSpacing(0)
-        nlp = QLabel("NLP-")
-        nlp.setObjectName("logoLabel")
-        vision = QLabel("Vision")
-        vision.setObjectName("logoAccent")
-        rt = QLabel("RT")
-        rt.setObjectName("logoLabel")
-        brand_row.addWidget(nlp)
-        brand_row.addWidget(vision)
-        brand_row.addWidget(rt)
+        # Single label with inline HTML keeps the three parts pixel-tight
+        brand_label = QLabel(
+            '<span style="color:#E6EDF3;font-size:17px;font-weight:700;">NLP-</span>'
+            '<span style="color:#388BFD;font-size:17px;font-weight:700;">Vision</span>'
+            '<span style="color:#E6EDF3;font-size:17px;font-weight:700;">RT</span>'
+        )
+        brand_label.setTextFormat(Qt.TextFormat.RichText)
+        brand_label.setStyleSheet("background: transparent;")
 
         tagline = QLabel("Real-Time NLP Video Control  ·  FPGA-Accelerated Pipeline")
         tagline.setObjectName("taglineLabel")
 
         brand_col = QVBoxLayout()
-        brand_col.setSpacing(2)
-        brand_col.addLayout(brand_row)
+        brand_col.setSpacing(3)
+        brand_col.addWidget(brand_label)
         brand_col.addWidget(tagline)
 
         layout.addLayout(brand_col)
         layout.addStretch(1)
+
+        # Extra breathing room before the right-side cluster
+        layout.addSpacing(16)
 
         self.connection_badge = QLabel("● WAITING FOR STREAM")
         self.connection_badge.setStyleSheet("""
@@ -331,10 +331,10 @@ class VideoReceiver(QMainWindow):
             border-radius: 10px;
             font-size: 11px;
             font-weight: 600;
-            padding: 3px 10px;
+            padding: 4px 14px;
         """)
         layout.addWidget(self.connection_badge)
-        layout.addSpacing(10)
+        layout.addSpacing(20)
 
         self.frame_counter_label = QLabel("FRAME  0")
         self.frame_counter_label.setObjectName("frameCounterLabel")
@@ -664,7 +664,7 @@ class VideoReceiver(QMainWindow):
             border-radius: 10px;
             font-size: 11px;
             font-weight: 600;
-            padding: 3px 10px;
+            padding: 4px 14px;
         """)
         self.status_label.setText(f"⬤  UDP:{UDP_PORT}")
         self.status_label.setStyleSheet(
