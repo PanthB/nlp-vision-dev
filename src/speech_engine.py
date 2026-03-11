@@ -39,15 +39,24 @@ MODEL_SIZE   = "tiny.en"   # "tiny.en" | "base.en" | "small.en"
 COMPUTE_TYPE = "int8"      # fastest on CPU; change to "float32" if problems
 
 # ── Audio / VAD settings ──────────────────────────────────────────────
-SAMPLE_RATE        = 16_000                              # Hz — Whisper native
-CHUNK_DURATION_S   = 0.1                                 # seconds per chunk
-BLOCK_SIZE         = int(SAMPLE_RATE * CHUNK_DURATION_S) # 1600 samples
-SILENCE_THRESHOLD  = 0.008   # RMS below this → silence
-SPEECH_TIMEOUT_S   = 1.2     # silence gap that triggers transcription
-MIN_SPEECH_S       = 0.4     # ignore clips shorter than this
+SAMPLE_RATE      = 16_000                              # Hz — Whisper native
+CHUNK_DURATION_S = 0.1                                 # seconds per chunk
+BLOCK_SIZE       = int(SAMPLE_RATE * CHUNK_DURATION_S) # 1600 samples
+SPEECH_TIMEOUT_S = 1.2     # silence gap that triggers transcription
+MIN_SPEECH_S     = 0.4     # ignore clips shorter than this
 
 _SILENCE_CHUNKS = int(SPEECH_TIMEOUT_S / CHUNK_DURATION_S)  # 12
 _MIN_CHUNKS     = int(MIN_SPEECH_S / CHUNK_DURATION_S)       # 4
+
+# ── Adaptive VAD — ambient noise calibration ──────────────────────────
+# On each mic-on, the engine samples ambient noise for CALIBRATION_S seconds
+# and sets the silence threshold to AMBIENT_SNR_RATIO × that ambient RMS.
+# This self-tunes to quiet offices, loud labs, or demo environments.
+CALIBRATION_S     = 0.8   # seconds to measure ambient noise at session start
+AMBIENT_SNR_RATIO = 4.0   # speech must be this many × louder than ambient
+_THRESHOLD_MIN    = 0.006 # floor  — never go below (prevents hair-trigger in silence)
+_THRESHOLD_MAX    = 0.060 # ceiling — never go above (prevents deaf mode in very loud rooms)
+_THRESHOLD_DEFAULT = 0.012 # used if calibration data is unavailable
 
 # ── Voice-send keywords ───────────────────────────────────────────────
 SEND_KEYWORDS: frozenset[str] = frozenset({"send", "enter", "go", "submit"})
@@ -149,7 +158,7 @@ class SpeechEngine(QObject):
             from faster_whisper import WhisperModel
             self._model       = WhisperModel(MODEL_SIZE, device="cpu", compute_type=COMPUTE_TYPE)
             self._model_ready = True
-            self.model_status.emit("Speech detection ready")
+            self.model_status.emit("Enter a command")
         except Exception as exc:
             self.error.emit(f"Failed to load speech detection: {exc}")
 
@@ -184,6 +193,31 @@ class SpeechEngine(QObject):
                 channels=1,
                 callback=_callback,
             ):
+                # ── Ambient noise calibration ─────────────────────────
+                self.transcript_partial.emit("Calibrating…")
+                calibration_chunks = max(1, int(CALIBRATION_S / CHUNK_DURATION_S))
+                ambient_rms_samples: List[float] = []
+                for _ in range(calibration_chunks):
+                    if self._stop_event.is_set():
+                        break
+                    try:
+                        cal_chunk = audio_queue.get(timeout=0.5)
+                    except queue.Empty:
+                        continue
+                    fc = cal_chunk.astype(np.float32).flatten() / 32768.0
+                    ambient_rms_samples.append(float(np.sqrt(np.mean(fc ** 2))))
+
+                if ambient_rms_samples:
+                    ambient_rms = float(np.mean(ambient_rms_samples))
+                    silence_threshold = max(
+                        _THRESHOLD_MIN,
+                        min(_THRESHOLD_MAX, ambient_rms * AMBIENT_SNR_RATIO),
+                    )
+                else:
+                    silence_threshold = _THRESHOLD_DEFAULT
+
+                self.transcript_partial.emit("Listening…")
+
                 while not self._stop_event.is_set():
                     try:
                         chunk = audio_queue.get(timeout=0.3)
@@ -193,7 +227,7 @@ class SpeechEngine(QObject):
                     float_chunk = chunk.astype(np.float32).flatten() / 32768.0
                     rms = float(np.sqrt(np.mean(float_chunk ** 2)))
 
-                    if rms > SILENCE_THRESHOLD:
+                    if rms > silence_threshold:
                         if not in_speech:
                             in_speech = True
                             self.transcript_partial.emit("Detecting speech…")

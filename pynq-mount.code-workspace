@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "../../pynq-mount"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}
